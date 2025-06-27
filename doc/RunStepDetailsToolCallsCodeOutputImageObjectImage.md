@@ -1,0 +1,15 @@
+# openai_flutter_sdk.model.RunStepDetailsToolCallsCodeOutputImageObjectImage
+
+## Load the model package
+```dart
+import 'package:openai_flutter_sdk/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**fileId** | **String** | The [file](/docs/api-reference/files) ID of the image. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

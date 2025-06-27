@@ -1,0 +1,108 @@
+import 'package:test/test.dart';
+import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
+
+// tests for CreateRunRequest
+void main() {
+  final instance = CreateRunRequestBuilder();
+  // TODO add properties to the builder and call build()
+
+  group(CreateRunRequest, () {
+    // The ID of the [assistant](/docs/api-reference/assistants) to use to execute this run.
+    // String assistantId
+    test('to test the property `assistantId`', () async {
+      // TODO
+    });
+
+    // CreateRunRequestModel model
+    test('to test the property `model`', () async {
+      // TODO
+    });
+
+    // ReasoningEffort reasoningEffort
+    test('to test the property `reasoningEffort`', () async {
+      // TODO
+    });
+
+    // Overrides the [instructions](/docs/api-reference/assistants/createAssistant) of the assistant. This is useful for modifying the behavior on a per-run basis.
+    // String instructions
+    test('to test the property `instructions`', () async {
+      // TODO
+    });
+
+    // Appends additional instructions at the end of the instructions for the run. This is useful for modifying the behavior on a per-run basis without overriding other instructions.
+    // String additionalInstructions
+    test('to test the property `additionalInstructions`', () async {
+      // TODO
+    });
+
+    // Adds additional messages to the thread before creating the run.
+    // BuiltList<CreateMessageRequest> additionalMessages
+    test('to test the property `additionalMessages`', () async {
+      // TODO
+    });
+
+    // Override the tools the assistant can use for this run. This is useful for modifying the behavior on a per-run basis.
+    // BuiltList<AssistantObjectToolsInner> tools
+    test('to test the property `tools`', () async {
+      // TODO
+    });
+
+    // Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters. 
+    // BuiltMap<String, String> metadata
+    test('to test the property `metadata`', () async {
+      // TODO
+    });
+
+    // What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. 
+    // num temperature (default value: 1)
+    test('to test the property `temperature`', () async {
+      // TODO
+    });
+
+    // An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.  We generally recommend altering this or temperature but not both. 
+    // num topP (default value: 1)
+    test('to test the property `topP`', () async {
+      // TODO
+    });
+
+    // If `true`, returns a stream of events that happen during the Run as server-sent events, terminating when the Run enters a terminal state with a `data: [DONE]` message. 
+    // bool stream
+    test('to test the property `stream`', () async {
+      // TODO
+    });
+
+    // The maximum number of prompt tokens that may be used over the course of the run. The run will make a best effort to use only the number of prompt tokens specified, across multiple turns of the run. If the run exceeds the number of prompt tokens specified, the run will end with status `incomplete`. See `incomplete_details` for more info. 
+    // int maxPromptTokens
+    test('to test the property `maxPromptTokens`', () async {
+      // TODO
+    });
+
+    // The maximum number of completion tokens that may be used over the course of the run. The run will make a best effort to use only the number of completion tokens specified, across multiple turns of the run. If the run exceeds the number of completion tokens specified, the run will end with status `incomplete`. See `incomplete_details` for more info. 
+    // int maxCompletionTokens
+    test('to test the property `maxCompletionTokens`', () async {
+      // TODO
+    });
+
+    // TruncationObject truncationStrategy
+    test('to test the property `truncationStrategy`', () async {
+      // TODO
+    });
+
+    // AssistantsApiToolChoiceOption toolChoice
+    test('to test the property `toolChoice`', () async {
+      // TODO
+    });
+
+    // Whether to enable [parallel function calling](/docs/guides/function-calling#configuring-parallel-function-calling) during tool use.
+    // bool parallelToolCalls (default value: true)
+    test('to test the property `parallelToolCalls`', () async {
+      // TODO
+    });
+
+    // AssistantsApiResponseFormatOption responseFormat
+    test('to test the property `responseFormat`', () async {
+      // TODO
+    });
+
+  });
+}

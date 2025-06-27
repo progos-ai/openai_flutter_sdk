@@ -1,0 +1,17 @@
+# openai_flutter_sdk.model.FineTuningJobHyperparameters
+
+## Load the model package
+```dart
+import 'package:openai_flutter_sdk/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**batchSize** | [**FineTuningJobHyperparametersBatchSize**](FineTuningJobHyperparametersBatchSize.md) |  | [optional] 
+**learningRateMultiplier** | [**CreateFineTuningJobRequestHyperparametersLearningRateMultiplier**](CreateFineTuningJobRequestHyperparametersLearningRateMultiplier.md) |  | [optional] 
+**nEpochs** | [**CreateFineTuningJobRequestHyperparametersNEpochs**](CreateFineTuningJobRequestHyperparametersNEpochs.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

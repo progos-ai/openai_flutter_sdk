@@ -1,0 +1,193 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:built_collection/built_collection.dart';
+import 'package:openai_flutter_sdk/src/model/eval_run.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'eval_run_list.g.dart';
+
+/// An object representing a list of runs for an evaluation. 
+///
+/// Properties:
+/// * [object] - The type of this object. It is always set to \"list\". 
+/// * [data] - An array of eval run objects. 
+/// * [firstId] - The identifier of the first eval run in the data array.
+/// * [lastId] - The identifier of the last eval run in the data array.
+/// * [hasMore] - Indicates whether there are more evals available.
+@BuiltValue()
+abstract class EvalRunList implements Built<EvalRunList, EvalRunListBuilder> {
+  /// The type of this object. It is always set to \"list\". 
+  @BuiltValueField(wireName: r'object')
+  EvalRunListObjectEnum get object;
+  // enum objectEnum {  list,  };
+
+  /// An array of eval run objects. 
+  @BuiltValueField(wireName: r'data')
+  BuiltList<EvalRun> get data;
+
+  /// The identifier of the first eval run in the data array.
+  @BuiltValueField(wireName: r'first_id')
+  String get firstId;
+
+  /// The identifier of the last eval run in the data array.
+  @BuiltValueField(wireName: r'last_id')
+  String get lastId;
+
+  /// Indicates whether there are more evals available.
+  @BuiltValueField(wireName: r'has_more')
+  bool get hasMore;
+
+  EvalRunList._();
+
+  factory EvalRunList([void updates(EvalRunListBuilder b)]) = _$EvalRunList;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(EvalRunListBuilder b) => b
+      ..object = const EvalRunListObjectEnum._('list');
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<EvalRunList> get serializer => _$EvalRunListSerializer();
+}
+
+class _$EvalRunListSerializer implements PrimitiveSerializer<EvalRunList> {
+  @override
+  final Iterable<Type> types = const [EvalRunList, _$EvalRunList];
+
+  @override
+  final String wireName = r'EvalRunList';
+
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    EvalRunList object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    yield r'object';
+    yield serializers.serialize(
+      object.object,
+      specifiedType: const FullType(EvalRunListObjectEnum),
+    );
+    yield r'data';
+    yield serializers.serialize(
+      object.data,
+      specifiedType: const FullType(BuiltList, [FullType(EvalRun)]),
+    );
+    yield r'first_id';
+    yield serializers.serialize(
+      object.firstId,
+      specifiedType: const FullType(String),
+    );
+    yield r'last_id';
+    yield serializers.serialize(
+      object.lastId,
+      specifiedType: const FullType(String),
+    );
+    yield r'has_more';
+    yield serializers.serialize(
+      object.hasMore,
+      specifiedType: const FullType(bool),
+    );
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    EvalRunList object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required EvalRunListBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'object':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(EvalRunListObjectEnum),
+          ) as EvalRunListObjectEnum;
+          result.object = valueDes;
+          break;
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(EvalRun)]),
+          ) as BuiltList<EvalRun>;
+          result.data.replace(valueDes);
+          break;
+        case r'first_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.firstId = valueDes;
+          break;
+        case r'last_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.lastId = valueDes;
+          break;
+        case r'has_more':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.hasMore = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  EvalRunList deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = EvalRunListBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
+}
+
+class EvalRunListObjectEnum extends EnumClass {
+
+  /// The type of this object. It is always set to \"list\". 
+  @BuiltValueEnumConst(wireName: r'list')
+  static const EvalRunListObjectEnum list = _$evalRunListObjectEnum_list;
+
+  static Serializer<EvalRunListObjectEnum> get serializer => _$evalRunListObjectEnumSerializer;
+
+  const EvalRunListObjectEnum._(String name): super(name);
+
+  static BuiltSet<EvalRunListObjectEnum> get values => _$evalRunListObjectEnumValues;
+  static EvalRunListObjectEnum valueOf(String name) => _$evalRunListObjectEnumValueOf(name);
+}
+

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **outputIndex** | **int** | The index of the output item in the response's output array. | 
 **summaryIndex** | **int** | The index of the summary part within the output item. | 
 **sequenceNumber** | **int** | The sequence number of this event. | 
-**delta** | [**JsonObject**](.md) | The partial update to the reasoning summary content. | 
+**delta** | [**Object**](.md) | The partial update to the reasoning summary content. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,9 +9,9 @@ All URIs are relative to *https://api.openai.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelBatch**](BatchApi.md#cancelbatch) | **POST** /batches/{batch_id}/cancel | Cancels an in-progress batch. The batch will be in status &#x60;cancelling&#x60; for up to 10 minutes, before changing to &#x60;cancelled&#x60;, where it will have partial results (if any) available in the output file.
+[**cancelBatch**](BatchApi.md#cancelbatch) | **POST** /batches/{batch_id}/cancel | Cancels an in-progress batch. The batch will be in status `cancelling` for up to 10 minutes, before changing to `cancelled`, where it will have partial results (if any) available in the output file.
 [**createBatch**](BatchApi.md#createbatch) | **POST** /batches | Creates and executes a batch from an uploaded file of requests
-[**listBatches**](BatchApi.md#listbatches) | **GET** /batches | List your organization&#39;s batches.
+[**listBatches**](BatchApi.md#listbatches) | **GET** /batches | List your organization's batches.
 [**retrieveBatch**](BatchApi.md#retrievebatch) | **GET** /batches/{batch_id} | Retrieves a batch.
 
 
@@ -23,14 +23,20 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getBatchApi();
-final String batchId = batchId_example; // String | The ID of the batch to cancel.
+final api_instance = BatchApi();
+final batchId = batchId_example; // String | The ID of the batch to cancel.
 
 try {
-    final response = api.cancelBatch(batchId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.cancelBatch(batchId);
+    print(result);
+} catch (e) {
     print('Exception when calling BatchApi->cancelBatch: $e\n');
 }
 ```
@@ -64,14 +70,20 @@ Creates and executes a batch from an uploaded file of requests
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getBatchApi();
-final CreateBatchRequest createBatchRequest = ; // CreateBatchRequest | 
+final api_instance = BatchApi();
+final createBatchRequest = CreateBatchRequest(); // CreateBatchRequest | 
 
 try {
-    final response = api.createBatch(createBatchRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createBatch(createBatchRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling BatchApi->createBatch: $e\n');
 }
 ```
@@ -105,15 +117,21 @@ List your organization's batches.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getBatchApi();
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final api_instance = BatchApi();
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
 
 try {
-    final response = api.listBatches(after, limit);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listBatches(after, limit);
+    print(result);
+} catch (e) {
     print('Exception when calling BatchApi->listBatches: $e\n');
 }
 ```
@@ -148,14 +166,20 @@ Retrieves a batch.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getBatchApi();
-final String batchId = batchId_example; // String | The ID of the batch to retrieve.
+final api_instance = BatchApi();
+final batchId = batchId_example; // String | The ID of the batch to retrieve.
 
 try {
-    final response = api.retrieveBatch(batchId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveBatch(batchId);
+    print(result);
+} catch (e) {
     print('Exception when calling BatchApi->retrieveBatch: $e\n');
 }
 ```

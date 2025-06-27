@@ -1,14 +1,23 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateResponse
 void main() {
-  final instance = CreateResponseBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateResponse();
 
-  group(CreateResponse, () {
+  group('test CreateResponse', () {
     // Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters. 
-    // BuiltMap<String, String> metadata
+    // Map<String, String> metadata (default value: const {})
     test('to test the property `metadata`', () async {
       // TODO
     });
@@ -83,7 +92,7 @@ void main() {
     });
 
     // An array of tools the model may call while generating a response. You  can specify which tool to use by setting the `tool_choice` parameter.  The two categories of tools you can provide the model are:  - **Built-in tools**: Tools that are provided by OpenAI that extend the   model's capabilities, like [web search](/docs/guides/tools-web-search)   or [file search](/docs/guides/tools-file-search). Learn more about   [built-in tools](/docs/guides/tools). - **Function calls (custom tools)**: Functions that are defined by you,   enabling the model to call your own code. Learn more about   [function calling](/docs/guides/function-calling). 
-    // BuiltList<Tool> tools
+    // List<Tool> tools (default value: const [])
     test('to test the property `tools`', () async {
       // TODO
     });
@@ -110,7 +119,7 @@ void main() {
     });
 
     // Specify additional output data to include in the model response. Currently supported values are: - `code_interpreter_call.outputs`: Includes the outputs of python code execution   in code interpreter tool call items. - `computer_call_output.output.image_url`: Include image urls from the computer call output. - `file_search_call.results`: Include the search results of   the file search tool call. - `message.input_image.image_url`: Include image urls from the input message. - `message.output_text.logprobs`: Include logprobs with assistant messages. - `reasoning.encrypted_content`: Includes an encrypted version of reasoning   tokens in reasoning item outputs. This enables reasoning items to be used in   multi-turn conversations when using the Responses API statelessly (like   when the `store` parameter is set to `false`, or when an organization is   enrolled in the zero data retention program). 
-    // BuiltList<Includable> include
+    // List<Includable> include (default value: const [])
     test('to test the property `include`', () async {
       // TODO
     });
@@ -139,5 +148,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **contentIndex** | **int** | The index of the content part within the output item. | 
 **annotationIndex** | **int** | The index of the annotation within the content part. | 
 **sequenceNumber** | **int** | The sequence number of this event. | 
-**annotation** | [**JsonObject**](.md) | The annotation object being added. (See annotation schema for details.) | 
+**annotation** | [**Object**](.md) | The annotation object being added. (See annotation schema for details.) | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

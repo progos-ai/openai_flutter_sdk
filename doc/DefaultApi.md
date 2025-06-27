@@ -35,13 +35,19 @@ Sent when a batch has been cancelled.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookBatchCancelled webhookBatchCancelled = ; // WebhookBatchCancelled | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookBatchCancelled = WebhookBatchCancelled(); // WebhookBatchCancelled | The event payload sent by the API.
 
 try {
-    api.batchCancelledPost(webhookBatchCancelled);
-} catch on DioException (e) {
+    api_instance.batchCancelledPost(webhookBatchCancelled);
+} catch (e) {
     print('Exception when calling DefaultApi->batchCancelledPost: $e\n');
 }
 ```
@@ -77,13 +83,19 @@ Sent when a batch has completed processing.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookBatchCompleted webhookBatchCompleted = ; // WebhookBatchCompleted | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookBatchCompleted = WebhookBatchCompleted(); // WebhookBatchCompleted | The event payload sent by the API.
 
 try {
-    api.batchCompletedPost(webhookBatchCompleted);
-} catch on DioException (e) {
+    api_instance.batchCompletedPost(webhookBatchCompleted);
+} catch (e) {
     print('Exception when calling DefaultApi->batchCompletedPost: $e\n');
 }
 ```
@@ -119,13 +131,19 @@ Sent when a batch has expired before completion.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookBatchExpired webhookBatchExpired = ; // WebhookBatchExpired | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookBatchExpired = WebhookBatchExpired(); // WebhookBatchExpired | The event payload sent by the API.
 
 try {
-    api.batchExpiredPost(webhookBatchExpired);
-} catch on DioException (e) {
+    api_instance.batchExpiredPost(webhookBatchExpired);
+} catch (e) {
     print('Exception when calling DefaultApi->batchExpiredPost: $e\n');
 }
 ```
@@ -161,13 +179,19 @@ Sent when a batch has failed.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookBatchFailed webhookBatchFailed = ; // WebhookBatchFailed | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookBatchFailed = WebhookBatchFailed(); // WebhookBatchFailed | The event payload sent by the API.
 
 try {
-    api.batchFailedPost(webhookBatchFailed);
-} catch on DioException (e) {
+    api_instance.batchFailedPost(webhookBatchFailed);
+} catch (e) {
     print('Exception when calling DefaultApi->batchFailedPost: $e\n');
 }
 ```
@@ -203,13 +227,19 @@ Sent when an eval run has been canceled.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookEvalRunCanceled webhookEvalRunCanceled = ; // WebhookEvalRunCanceled | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookEvalRunCanceled = WebhookEvalRunCanceled(); // WebhookEvalRunCanceled | The event payload sent by the API.
 
 try {
-    api.evalRunCanceledPost(webhookEvalRunCanceled);
-} catch on DioException (e) {
+    api_instance.evalRunCanceledPost(webhookEvalRunCanceled);
+} catch (e) {
     print('Exception when calling DefaultApi->evalRunCanceledPost: $e\n');
 }
 ```
@@ -245,13 +275,19 @@ Sent when an eval run has failed.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookEvalRunFailed webhookEvalRunFailed = ; // WebhookEvalRunFailed | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookEvalRunFailed = WebhookEvalRunFailed(); // WebhookEvalRunFailed | The event payload sent by the API.
 
 try {
-    api.evalRunFailedPost(webhookEvalRunFailed);
-} catch on DioException (e) {
+    api_instance.evalRunFailedPost(webhookEvalRunFailed);
+} catch (e) {
     print('Exception when calling DefaultApi->evalRunFailedPost: $e\n');
 }
 ```
@@ -287,13 +323,19 @@ Sent when an eval run has succeeded.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookEvalRunSucceeded webhookEvalRunSucceeded = ; // WebhookEvalRunSucceeded | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookEvalRunSucceeded = WebhookEvalRunSucceeded(); // WebhookEvalRunSucceeded | The event payload sent by the API.
 
 try {
-    api.evalRunSucceededPost(webhookEvalRunSucceeded);
-} catch on DioException (e) {
+    api_instance.evalRunSucceededPost(webhookEvalRunSucceeded);
+} catch (e) {
     print('Exception when calling DefaultApi->evalRunSucceededPost: $e\n');
 }
 ```
@@ -329,13 +371,19 @@ Sent when a fine-tuning job has been cancelled.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookFineTuningJobCancelled webhookFineTuningJobCancelled = ; // WebhookFineTuningJobCancelled | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookFineTuningJobCancelled = WebhookFineTuningJobCancelled(); // WebhookFineTuningJobCancelled | The event payload sent by the API.
 
 try {
-    api.fineTuningJobCancelledPost(webhookFineTuningJobCancelled);
-} catch on DioException (e) {
+    api_instance.fineTuningJobCancelledPost(webhookFineTuningJobCancelled);
+} catch (e) {
     print('Exception when calling DefaultApi->fineTuningJobCancelledPost: $e\n');
 }
 ```
@@ -371,13 +419,19 @@ Sent when a fine-tuning job has failed.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookFineTuningJobFailed webhookFineTuningJobFailed = ; // WebhookFineTuningJobFailed | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookFineTuningJobFailed = WebhookFineTuningJobFailed(); // WebhookFineTuningJobFailed | The event payload sent by the API.
 
 try {
-    api.fineTuningJobFailedPost(webhookFineTuningJobFailed);
-} catch on DioException (e) {
+    api_instance.fineTuningJobFailedPost(webhookFineTuningJobFailed);
+} catch (e) {
     print('Exception when calling DefaultApi->fineTuningJobFailedPost: $e\n');
 }
 ```
@@ -413,13 +467,19 @@ Sent when a fine-tuning job has succeeded.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookFineTuningJobSucceeded webhookFineTuningJobSucceeded = ; // WebhookFineTuningJobSucceeded | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookFineTuningJobSucceeded = WebhookFineTuningJobSucceeded(); // WebhookFineTuningJobSucceeded | The event payload sent by the API.
 
 try {
-    api.fineTuningJobSucceededPost(webhookFineTuningJobSucceeded);
-} catch on DioException (e) {
+    api_instance.fineTuningJobSucceededPost(webhookFineTuningJobSucceeded);
+} catch (e) {
     print('Exception when calling DefaultApi->fineTuningJobSucceededPost: $e\n');
 }
 ```
@@ -455,13 +515,19 @@ Sent when a background response has been cancelled.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookResponseCancelled webhookResponseCancelled = ; // WebhookResponseCancelled | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookResponseCancelled = WebhookResponseCancelled(); // WebhookResponseCancelled | The event payload sent by the API.
 
 try {
-    api.responseCancelledPost(webhookResponseCancelled);
-} catch on DioException (e) {
+    api_instance.responseCancelledPost(webhookResponseCancelled);
+} catch (e) {
     print('Exception when calling DefaultApi->responseCancelledPost: $e\n');
 }
 ```
@@ -497,13 +563,19 @@ Sent when a background response has completed successfully.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookResponseCompleted webhookResponseCompleted = ; // WebhookResponseCompleted | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookResponseCompleted = WebhookResponseCompleted(); // WebhookResponseCompleted | The event payload sent by the API.
 
 try {
-    api.responseCompletedPost(webhookResponseCompleted);
-} catch on DioException (e) {
+    api_instance.responseCompletedPost(webhookResponseCompleted);
+} catch (e) {
     print('Exception when calling DefaultApi->responseCompletedPost: $e\n');
 }
 ```
@@ -539,13 +611,19 @@ Sent when a background response has failed.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookResponseFailed webhookResponseFailed = ; // WebhookResponseFailed | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookResponseFailed = WebhookResponseFailed(); // WebhookResponseFailed | The event payload sent by the API.
 
 try {
-    api.responseFailedPost(webhookResponseFailed);
-} catch on DioException (e) {
+    api_instance.responseFailedPost(webhookResponseFailed);
+} catch (e) {
     print('Exception when calling DefaultApi->responseFailedPost: $e\n');
 }
 ```
@@ -581,13 +659,19 @@ Sent when a background response is incomplete.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getDefaultApi();
-final WebhookResponseIncomplete webhookResponseIncomplete = ; // WebhookResponseIncomplete | The event payload sent by the API.
+final api_instance = DefaultApi();
+final webhookResponseIncomplete = WebhookResponseIncomplete(); // WebhookResponseIncomplete | The event payload sent by the API.
 
 try {
-    api.responseIncompletePost(webhookResponseIncomplete);
-} catch on DioException (e) {
+    api_instance.responseIncompletePost(webhookResponseIncomplete);
+} catch (e) {
     print('Exception when calling DefaultApi->responseIncompletePost: $e\n');
 }
 ```

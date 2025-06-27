@@ -22,7 +22,7 @@ Method | HTTP request | Description
 [**listProjectUsers**](ProjectsApi.md#listprojectusers) | **GET** /organization/projects/{project_id}/users | Returns a list of users in the project.
 [**listProjects**](ProjectsApi.md#listprojects) | **GET** /organization/projects | Returns a list of projects.
 [**modifyProject**](ProjectsApi.md#modifyproject) | **POST** /organization/projects/{project_id} | Modifies a project in the organization.
-[**modifyProjectUser**](ProjectsApi.md#modifyprojectuser) | **POST** /organization/projects/{project_id}/users/{user_id} | Modifies a user&#39;s role in the project.
+[**modifyProjectUser**](ProjectsApi.md#modifyprojectuser) | **POST** /organization/projects/{project_id}/users/{user_id} | Modifies a user's role in the project.
 [**retrieveProject**](ProjectsApi.md#retrieveproject) | **GET** /organization/projects/{project_id} | Retrieves a project.
 [**retrieveProjectApiKey**](ProjectsApi.md#retrieveprojectapikey) | **GET** /organization/projects/{project_id}/api_keys/{key_id} | Retrieves an API key in the project.
 [**retrieveProjectServiceAccount**](ProjectsApi.md#retrieveprojectserviceaccount) | **GET** /organization/projects/{project_id}/service_accounts/{service_account_id} | Retrieves a service account in the project.
@@ -38,14 +38,20 @@ Archives a project in the organization. Archived projects cannot be used or upda
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
 
 try {
-    final response = api.archiveProject(projectId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.archiveProject(projectId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->archiveProject: $e\n');
 }
 ```
@@ -79,14 +85,20 @@ Create a new project in the organization. Projects can be created and archived, 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final ProjectCreateRequest projectCreateRequest = ; // ProjectCreateRequest | The project create request payload.
+final api_instance = ProjectsApi();
+final projectCreateRequest = ProjectCreateRequest(); // ProjectCreateRequest | The project create request payload.
 
 try {
-    final response = api.createProject(projectCreateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createProject(projectCreateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->createProject: $e\n');
 }
 ```
@@ -120,15 +132,21 @@ Creates a new service account in the project. This also returns an unredacted AP
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final ProjectServiceAccountCreateRequest projectServiceAccountCreateRequest = ; // ProjectServiceAccountCreateRequest | The project service account create request payload.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final projectServiceAccountCreateRequest = ProjectServiceAccountCreateRequest(); // ProjectServiceAccountCreateRequest | The project service account create request payload.
 
 try {
-    final response = api.createProjectServiceAccount(projectId, projectServiceAccountCreateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createProjectServiceAccount(projectId, projectServiceAccountCreateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->createProjectServiceAccount: $e\n');
 }
 ```
@@ -163,15 +181,21 @@ Adds a user to the project. Users must already be members of the organization to
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final ProjectUserCreateRequest projectUserCreateRequest = ; // ProjectUserCreateRequest | The project user create request payload.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final projectUserCreateRequest = ProjectUserCreateRequest(); // ProjectUserCreateRequest | The project user create request payload.
 
 try {
-    final response = api.createProjectUser(projectId, projectUserCreateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createProjectUser(projectId, projectUserCreateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->createProjectUser: $e\n');
 }
 ```
@@ -206,15 +230,21 @@ Deletes an API key from the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String keyId = keyId_example; // String | The ID of the API key.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final keyId = keyId_example; // String | The ID of the API key.
 
 try {
-    final response = api.deleteProjectApiKey(projectId, keyId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteProjectApiKey(projectId, keyId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->deleteProjectApiKey: $e\n');
 }
 ```
@@ -249,15 +279,21 @@ Deletes a service account from the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String serviceAccountId = serviceAccountId_example; // String | The ID of the service account.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final serviceAccountId = serviceAccountId_example; // String | The ID of the service account.
 
 try {
-    final response = api.deleteProjectServiceAccount(projectId, serviceAccountId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteProjectServiceAccount(projectId, serviceAccountId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->deleteProjectServiceAccount: $e\n');
 }
 ```
@@ -292,15 +328,21 @@ Deletes a user from the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String userId = userId_example; // String | The ID of the user.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final userId = userId_example; // String | The ID of the user.
 
 try {
-    final response = api.deleteProjectUser(projectId, userId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteProjectUser(projectId, userId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->deleteProjectUser: $e\n');
 }
 ```
@@ -335,16 +377,22 @@ Returns a list of API keys in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
 
 try {
-    final response = api.listProjectApiKeys(projectId, limit, after);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listProjectApiKeys(projectId, limit, after);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->listProjectApiKeys: $e\n');
 }
 ```
@@ -380,17 +428,23 @@ Returns the rate limits per model for a project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final int limit = 56; // int | A limit on the number of objects to be returned. The default is 100. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, beginning with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final limit = 56; // int | A limit on the number of objects to be returned. The default is 100. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, beginning with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
 
 try {
-    final response = api.listProjectRateLimits(projectId, limit, after, before);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listProjectRateLimits(projectId, limit, after, before);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->listProjectRateLimits: $e\n');
 }
 ```
@@ -427,16 +481,22 @@ Returns a list of service accounts in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
 
 try {
-    final response = api.listProjectServiceAccounts(projectId, limit, after);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listProjectServiceAccounts(projectId, limit, after);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->listProjectServiceAccounts: $e\n');
 }
 ```
@@ -472,16 +532,22 @@ Returns a list of users in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
 
 try {
-    final response = api.listProjectUsers(projectId, limit, after);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listProjectUsers(projectId, limit, after);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->listProjectUsers: $e\n');
 }
 ```
@@ -517,16 +583,22 @@ Returns a list of projects.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final bool includeArchived = true; // bool | If `true` returns all projects including those that have been `archived`. Archived projects are not included by default.
+final api_instance = ProjectsApi();
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final includeArchived = true; // bool | If `true` returns all projects including those that have been `archived`. Archived projects are not included by default.
 
 try {
-    final response = api.listProjects(limit, after, includeArchived);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listProjects(limit, after, includeArchived);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->listProjects: $e\n');
 }
 ```
@@ -562,15 +634,21 @@ Modifies a project in the organization.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final ProjectUpdateRequest projectUpdateRequest = ; // ProjectUpdateRequest | The project update request payload.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final projectUpdateRequest = ProjectUpdateRequest(); // ProjectUpdateRequest | The project update request payload.
 
 try {
-    final response = api.modifyProject(projectId, projectUpdateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyProject(projectId, projectUpdateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->modifyProject: $e\n');
 }
 ```
@@ -605,16 +683,22 @@ Modifies a user's role in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String userId = userId_example; // String | The ID of the user.
-final ProjectUserUpdateRequest projectUserUpdateRequest = ; // ProjectUserUpdateRequest | The project user update request payload.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final userId = userId_example; // String | The ID of the user.
+final projectUserUpdateRequest = ProjectUserUpdateRequest(); // ProjectUserUpdateRequest | The project user update request payload.
 
 try {
-    final response = api.modifyProjectUser(projectId, userId, projectUserUpdateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyProjectUser(projectId, userId, projectUserUpdateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->modifyProjectUser: $e\n');
 }
 ```
@@ -650,14 +734,20 @@ Retrieves a project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
 
 try {
-    final response = api.retrieveProject(projectId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveProject(projectId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->retrieveProject: $e\n');
 }
 ```
@@ -691,15 +781,21 @@ Retrieves an API key in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String keyId = keyId_example; // String | The ID of the API key.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final keyId = keyId_example; // String | The ID of the API key.
 
 try {
-    final response = api.retrieveProjectApiKey(projectId, keyId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveProjectApiKey(projectId, keyId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->retrieveProjectApiKey: $e\n');
 }
 ```
@@ -734,15 +830,21 @@ Retrieves a service account in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String serviceAccountId = serviceAccountId_example; // String | The ID of the service account.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final serviceAccountId = serviceAccountId_example; // String | The ID of the service account.
 
 try {
-    final response = api.retrieveProjectServiceAccount(projectId, serviceAccountId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveProjectServiceAccount(projectId, serviceAccountId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->retrieveProjectServiceAccount: $e\n');
 }
 ```
@@ -777,15 +879,21 @@ Retrieves a user in the project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String userId = userId_example; // String | The ID of the user.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final userId = userId_example; // String | The ID of the user.
 
 try {
-    final response = api.retrieveProjectUser(projectId, userId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveProjectUser(projectId, userId);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->retrieveProjectUser: $e\n');
 }
 ```
@@ -820,16 +928,22 @@ Updates a project rate limit.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getProjectsApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final String rateLimitId = rateLimitId_example; // String | The ID of the rate limit.
-final ProjectRateLimitUpdateRequest projectRateLimitUpdateRequest = ; // ProjectRateLimitUpdateRequest | The project rate limit update request payload.
+final api_instance = ProjectsApi();
+final projectId = projectId_example; // String | The ID of the project.
+final rateLimitId = rateLimitId_example; // String | The ID of the rate limit.
+final projectRateLimitUpdateRequest = ProjectRateLimitUpdateRequest(); // ProjectRateLimitUpdateRequest | The project rate limit update request payload.
 
 try {
-    final response = api.updateProjectRateLimits(projectId, rateLimitId, projectRateLimitUpdateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.updateProjectRateLimits(projectId, rateLimitId, projectRateLimitUpdateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProjectsApi->updateProjectRateLimits: $e\n');
 }
 ```

@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for RealtimeConversationItemWithReference
 void main() {
-  final instance = RealtimeConversationItemWithReferenceBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = RealtimeConversationItemWithReference();
 
-  group(RealtimeConversationItemWithReference, () {
+  group('test RealtimeConversationItemWithReference', () {
     // For an item of type (`message` | `function_call` | `function_call_output`) this field allows the client to assign the unique ID of the item. It is not required because the server will generate one if not provided.  For an item of type `item_reference`, this field is required and is a reference to any item that has previously existed in the conversation. 
     // String id
     test('to test the property `id`', () async {
@@ -38,7 +47,7 @@ void main() {
     });
 
     // The content of the message, applicable for `message` items.  - Message items of role `system` support only `input_text` content - Message items of role `user` support `input_text` and `input_audio`    content - Message items of role `assistant` support `text` content. 
-    // BuiltList<RealtimeConversationItemContentInner> content
+    // List<RealtimeConversationItemContentInner> content (default value: const [])
     test('to test the property `content`', () async {
       // TODO
     });
@@ -67,5 +76,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

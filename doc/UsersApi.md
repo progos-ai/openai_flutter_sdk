@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteUser**](UsersApi.md#deleteuser) | **DELETE** /organization/users/{user_id} | Deletes a user from the organization.
 [**listUsers**](UsersApi.md#listusers) | **GET** /organization/users | Lists all of the users in the organization.
-[**modifyUser**](UsersApi.md#modifyuser) | **POST** /organization/users/{user_id} | Modifies a user&#39;s role in the organization.
+[**modifyUser**](UsersApi.md#modifyuser) | **POST** /organization/users/{user_id} | Modifies a user's role in the organization.
 [**retrieveUser**](UsersApi.md#retrieveuser) | **GET** /organization/users/{user_id} | Retrieves a user by their identifier.
 
 
@@ -23,14 +23,20 @@ Deletes a user from the organization.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUsersApi();
-final String userId = userId_example; // String | The ID of the user.
+final api_instance = UsersApi();
+final userId = userId_example; // String | The ID of the user.
 
 try {
-    final response = api.deleteUser(userId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteUser(userId);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->deleteUser: $e\n');
 }
 ```
@@ -64,16 +70,22 @@ Lists all of the users in the organization.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUsersApi();
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final BuiltList<String> emails = ; // BuiltList<String> | Filter by the email address of users.
+final api_instance = UsersApi();
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final emails = []; // List<String> | Filter by the email address of users.
 
 try {
-    final response = api.listUsers(limit, after, emails);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listUsers(limit, after, emails);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->listUsers: $e\n');
 }
 ```
@@ -84,7 +96,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **int**| A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20.  | [optional] [default to 20]
  **after** | **String**| A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list.  | [optional] 
- **emails** | [**BuiltList&lt;String&gt;**](String.md)| Filter by the email address of users. | [optional] 
+ **emails** | [**List<String>**](String.md)| Filter by the email address of users. | [optional] [default to const []]
 
 ### Return type
 
@@ -109,15 +121,21 @@ Modifies a user's role in the organization.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUsersApi();
-final String userId = userId_example; // String | The ID of the user.
-final UserRoleUpdateRequest userRoleUpdateRequest = ; // UserRoleUpdateRequest | The new user role to modify. This must be one of `owner` or `member`.
+final api_instance = UsersApi();
+final userId = userId_example; // String | The ID of the user.
+final userRoleUpdateRequest = UserRoleUpdateRequest(); // UserRoleUpdateRequest | The new user role to modify. This must be one of `owner` or `member`.
 
 try {
-    final response = api.modifyUser(userId, userRoleUpdateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyUser(userId, userRoleUpdateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->modifyUser: $e\n');
 }
 ```
@@ -152,14 +170,20 @@ Retrieves a user by their identifier.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUsersApi();
-final String userId = userId_example; // String | The ID of the user.
+final api_instance = UsersApi();
+final userId = userId_example; // String | The ID of the user.
 
 try {
-    final response = api.retrieveUser(userId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveUser(userId);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->retrieveUser: $e\n');
 }
 ```

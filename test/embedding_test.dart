@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for Embedding
 void main() {
-  final instance = EmbeddingBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = Embedding();
 
-  group(Embedding, () {
+  group('test Embedding', () {
     // The index of the embedding in the list of embeddings.
     // int index
     test('to test the property `index`', () async {
@@ -14,7 +23,7 @@ void main() {
     });
 
     // The embedding vector, which is a list of floats. The length of vector depends on the model as listed in the [embedding guide](/docs/guides/embeddings). 
-    // BuiltList<double> embedding
+    // List<double> embedding (default value: const [])
     test('to test the property `embedding`', () async {
       // TODO
     });
@@ -25,5 +34,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

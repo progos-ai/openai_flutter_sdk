@@ -24,8 +24,8 @@ Name | Type | Description | Notes
 **incompleteDetails** | [**RunObjectIncompleteDetails**](RunObjectIncompleteDetails.md) |  | 
 **model** | **String** | The model that the [assistant](/docs/api-reference/assistants) used for this run. | 
 **instructions** | **String** | The instructions that the [assistant](/docs/api-reference/assistants) used for this run. | 
-**tools** | [**BuiltList&lt;AssistantObjectToolsInner&gt;**](AssistantObjectToolsInner.md) | The list of tools that the [assistant](/docs/api-reference/assistants) used for this run. | [default to ListBuilder()]
-**metadata** | **BuiltMap&lt;String, String&gt;** | Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.  | 
+**tools** | [**List<AssistantObjectToolsInner>**](AssistantObjectToolsInner.md) | The list of tools that the [assistant](/docs/api-reference/assistants) used for this run. | [default to const []]
+**metadata** | **Map<String, String>** | Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.  | [default to const {}]
 **usage** | [**RunCompletionUsage**](RunCompletionUsage.md) |  | 
 **temperature** | **num** | The sampling temperature used for this run. If not set, defaults to 1. | [optional] 
 **topP** | **num** | The nucleus sampling value used for this run. If not set, defaults to 1. | [optional] 

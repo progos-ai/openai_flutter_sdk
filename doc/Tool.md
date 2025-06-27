@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **type** | **String** | The type of the function tool. Always `function`. | [default to 'function']
 **name** | **String** | The name of the function to call. | 
 **description** | **String** | A description of the function. Used by the model to determine whether or not to call the function. | [optional] 
-**parameters** | [**BuiltMap&lt;String, JsonObject&gt;**](JsonObject.md) | A JSON schema object describing the parameters of the function. | 
+**parameters** | [**Map<String, Object>**](Object.md) | A JSON schema object describing the parameters of the function. | [default to const {}]
 **strict** | **bool** | Whether to enforce strict parameter validation. Default `true`. | 
-**vectorStoreIds** | **BuiltList&lt;String&gt;** | The IDs of the vector stores to search. | 
+**vectorStoreIds** | **List<String>** | The IDs of the vector stores to search. | [default to const []]
 **maxNumResults** | **int** | The maximum number of results to return. This number should be between 1 and 50 inclusive. | [optional] 
 **rankingOptions** | [**RankingOptions**](RankingOptions.md) | Ranking options for search. | [optional] 
 **filters** | [**Filters**](Filters.md) | A filter to apply. | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **displayHeight** | **int** | The height of the computer display. | 
 **serverLabel** | **String** | A label for this MCP server, used to identify it in tool calls.  | 
 **serverUrl** | **String** | The URL for the MCP server.  | 
-**headers** | **BuiltMap&lt;String, String&gt;** | Optional HTTP headers to send to the MCP server. Use for authentication or other purposes.  | [optional] 
+**headers** | **Map<String, String>** | Optional HTTP headers to send to the MCP server. Use for authentication or other purposes.  | [optional] [default to const {}]
 **allowedTools** | [**MCPToolAllowedTools**](MCPToolAllowedTools.md) |  | [optional] 
 **requireApproval** | [**MCPToolRequireApproval**](MCPToolRequireApproval.md) |  | [optional] 
 **container** | [**CodeInterpreterToolContainer**](CodeInterpreterToolContainer.md) |  | 

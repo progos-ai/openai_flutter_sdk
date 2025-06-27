@@ -8,8 +8,8 @@ import 'package:openai_flutter_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**input** | [**BuiltList&lt;EvalRunOutputItemSampleInputInner&gt;**](EvalRunOutputItemSampleInputInner.md) | An array of input messages. | 
-**output** | [**BuiltList&lt;EvalRunOutputItemSampleOutputInner&gt;**](EvalRunOutputItemSampleOutputInner.md) | An array of output messages. | 
+**input** | [**List<EvalRunOutputItemSampleInputInner>**](EvalRunOutputItemSampleInputInner.md) | An array of input messages. | [default to const []]
+**output** | [**List<EvalRunOutputItemSampleOutputInner>**](EvalRunOutputItemSampleOutputInner.md) | An array of output messages. | [default to const []]
 **finishReason** | **String** | The reason why the sample generation was finished. | 
 **model** | **String** | The model used for generating the sample. | 
 **usage** | [**EvalRunOutputItemSampleUsage**](EvalRunOutputItemSampleUsage.md) |  | 

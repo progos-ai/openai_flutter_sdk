@@ -1,89 +1,100 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateModerationResponseResultsInnerCategoryAppliedInputTypes
 void main() {
-  final instance = CreateModerationResponseResultsInnerCategoryAppliedInputTypesBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateModerationResponseResultsInnerCategoryAppliedInputTypes();
 
-  group(CreateModerationResponseResultsInnerCategoryAppliedInputTypes, () {
+  group('test CreateModerationResponseResultsInnerCategoryAppliedInputTypes', () {
     // The applied input type(s) for the category 'hate'.
-    // BuiltList<String> hate
+    // List<String> hate (default value: const [])
     test('to test the property `hate`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'hate/threatening'.
-    // BuiltList<String> hateSlashThreatening
+    // List<String> hateSlashThreatening (default value: const [])
     test('to test the property `hateSlashThreatening`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'harassment'.
-    // BuiltList<String> harassment
+    // List<String> harassment (default value: const [])
     test('to test the property `harassment`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'harassment/threatening'.
-    // BuiltList<String> harassmentSlashThreatening
+    // List<String> harassmentSlashThreatening (default value: const [])
     test('to test the property `harassmentSlashThreatening`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'illicit'.
-    // BuiltList<String> illicit
+    // List<String> illicit (default value: const [])
     test('to test the property `illicit`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'illicit/violent'.
-    // BuiltList<String> illicitSlashViolent
+    // List<String> illicitSlashViolent (default value: const [])
     test('to test the property `illicitSlashViolent`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'self-harm'.
-    // BuiltList<String> selfHarm
+    // List<String> selfHarm (default value: const [])
     test('to test the property `selfHarm`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'self-harm/intent'.
-    // BuiltList<String> selfHarmSlashIntent
+    // List<String> selfHarmSlashIntent (default value: const [])
     test('to test the property `selfHarmSlashIntent`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'self-harm/instructions'.
-    // BuiltList<String> selfHarmSlashInstructions
+    // List<String> selfHarmSlashInstructions (default value: const [])
     test('to test the property `selfHarmSlashInstructions`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'sexual'.
-    // BuiltList<String> sexual
+    // List<String> sexual (default value: const [])
     test('to test the property `sexual`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'sexual/minors'.
-    // BuiltList<String> sexualSlashMinors
+    // List<String> sexualSlashMinors (default value: const [])
     test('to test the property `sexualSlashMinors`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'violence'.
-    // BuiltList<String> violence
+    // List<String> violence (default value: const [])
     test('to test the property `violence`', () async {
       // TODO
     });
 
     // The applied input type(s) for the category 'violence/graphic'.
-    // BuiltList<String> violenceSlashGraphic
+    // List<String> violenceSlashGraphic (default value: const [])
     test('to test the property `violenceSlashGraphic`', () async {
       // TODO
     });
 
+
   });
+
 }

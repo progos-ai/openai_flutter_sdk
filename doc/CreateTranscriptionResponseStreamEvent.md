@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | The type of the event. Always `transcript.text.delta`.  | 
 **delta** | **String** | The text delta that was additionally transcribed.  | 
-**logprobs** | [**BuiltList&lt;TranscriptTextDeltaEventLogprobsInner&gt;**](TranscriptTextDeltaEventLogprobsInner.md) | The log probabilities of the individual tokens in the transcription. Only included if you [create a transcription](/docs/api-reference/audio/create-transcription) with the `include[]` parameter set to `logprobs`.  | [optional] 
+**logprobs** | [**List<TranscriptTextDeltaEventLogprobsInner>**](TranscriptTextDeltaEventLogprobsInner.md) | The log probabilities of the individual tokens in the transcription. Only included if you [create a transcription](/docs/api-reference/audio/create-transcription) with the `include[]` parameter set to `logprobs`.  | [optional] [default to const []]
 **text** | **String** | The text that was transcribed.  | 
 **usage** | [**TranscriptTextUsageTokens**](TranscriptTextUsageTokens.md) |  | [optional] 
 

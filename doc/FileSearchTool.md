@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | The type of the file search tool. Always `file_search`. | [default to 'file_search']
-**vectorStoreIds** | **BuiltList&lt;String&gt;** | The IDs of the vector stores to search. | 
+**vectorStoreIds** | **List<String>** | The IDs of the vector stores to search. | [default to const []]
 **maxNumResults** | **int** | The maximum number of results to return. This number should be between 1 and 50 inclusive. | [optional] 
 **rankingOptions** | [**RankingOptions**](RankingOptions.md) | Ranking options for search. | [optional] 
 **filters** | [**Filters**](Filters.md) | A filter to apply. | [optional] 

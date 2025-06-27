@@ -1,12 +1,22 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 
 /// tests for ChatApi
 void main() {
-  final instance = OpenaiFlutterSdk().getChatApi();
+  // final instance = ChatApi();
 
-  group(ChatApi, () {
+  group('tests for ChatApi', () {
     // **Starting a new project?** We recommend trying [Responses](/docs/api-reference/responses)  to take advantage of the latest OpenAI platform features. Compare [Chat Completions with Responses](/docs/guides/responses-vs-chat-completions?api-mode=responses).  ---  Creates a model response for the given chat conversation. Learn more in the [text generation](/docs/guides/text-generation), [vision](/docs/guides/vision), and [audio](/docs/guides/audio) guides.  Parameter support can differ depending on the model used to generate the response, particularly for newer reasoning models. Parameters that are only supported for reasoning models are noted below. For the current state of  unsupported parameters in reasoning models,  [refer to the reasoning guide](/docs/guides/reasoning). 
     //
     //Future<CreateChatCompletionResponse> createChatCompletion(CreateChatCompletionRequest createChatCompletionRequest) async
@@ -37,7 +47,7 @@ void main() {
 
     // List stored Chat Completions. Only Chat Completions that have been stored with the `store` parameter set to `true` will be returned. 
     //
-    //Future<ChatCompletionList> listChatCompletions({ String model, BuiltMap<String, String> metadata, String after, int limit, String order }) async
+    //Future<ChatCompletionList> listChatCompletions({ String model, Map<String, String> metadata, String after, int limit, String order }) async
     test('test listChatCompletions', () async {
       // TODO
     });

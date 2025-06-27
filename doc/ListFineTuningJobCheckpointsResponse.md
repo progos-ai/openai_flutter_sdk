@@ -8,7 +8,7 @@ import 'package:openai_flutter_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BuiltList&lt;FineTuningJobCheckpoint&gt;**](FineTuningJobCheckpoint.md) |  | 
+**data** | [**List<FineTuningJobCheckpoint>**](FineTuningJobCheckpoint.md) |  | [default to const []]
 **object** | **String** |  | 
 **firstId** | **String** |  | [optional] 
 **lastId** | **String** |  | [optional] 

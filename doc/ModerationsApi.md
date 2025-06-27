@@ -20,14 +20,20 @@ Classifies if text and/or image inputs are potentially harmful. Learn more in th
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getModerationsApi();
-final CreateModerationRequest createModerationRequest = ; // CreateModerationRequest | 
+final api_instance = ModerationsApi();
+final createModerationRequest = CreateModerationRequest(); // CreateModerationRequest | 
 
 try {
-    final response = api.createModeration(createModerationRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createModeration(createModerationRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ModerationsApi->createModeration: $e\n');
 }
 ```

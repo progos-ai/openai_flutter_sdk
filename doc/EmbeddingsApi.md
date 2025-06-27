@@ -20,14 +20,20 @@ Creates an embedding vector representing the input text.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEmbeddingsApi();
-final CreateEmbeddingRequest createEmbeddingRequest = ; // CreateEmbeddingRequest | 
+final api_instance = EmbeddingsApi();
+final createEmbeddingRequest = CreateEmbeddingRequest(); // CreateEmbeddingRequest | 
 
 try {
-    final response = api.createEmbedding(createEmbeddingRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createEmbedding(createEmbeddingRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling EmbeddingsApi->createEmbedding: $e\n');
 }
 ```

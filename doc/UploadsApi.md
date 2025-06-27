@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**addUploadPart**](UploadsApi.md#adduploadpart) | **POST** /uploads/{upload_id}/parts | Adds a [Part](/docs/api-reference/uploads/part-object) to an [Upload](/docs/api-reference/uploads/object) object. A Part represents a chunk of bytes from the file you are trying to upload.   Each Part can be at most 64 MB, and you can add Parts until you hit the Upload maximum of 8 GB.  It is possible to add multiple Parts in parallel. You can decide the intended order of the Parts when you [complete the Upload](/docs/api-reference/uploads/complete). 
 [**cancelUpload**](UploadsApi.md#cancelupload) | **POST** /uploads/{upload_id}/cancel | Cancels the Upload. No Parts may be added after an Upload is cancelled. 
 [**completeUpload**](UploadsApi.md#completeupload) | **POST** /uploads/{upload_id}/complete | Completes the [Upload](/docs/api-reference/uploads/object).   Within the returned Upload object, there is a nested [File](/docs/api-reference/files/object) object that is ready to use in the rest of the platform.  You can specify the order of the Parts by passing in an ordered list of the Part IDs.  The number of bytes uploaded upon completion must match the number of bytes initially specified when creating the Upload object. No Parts may be added after an Upload is completed. 
-[**createUpload**](UploadsApi.md#createupload) | **POST** /uploads | Creates an intermediate [Upload](/docs/api-reference/uploads/object) object that you can add [Parts](/docs/api-reference/uploads/part-object) to. Currently, an Upload can accept at most 8 GB in total and expires after an hour after you create it.  Once you complete the Upload, we will create a [File](/docs/api-reference/files/object) object that contains all the parts you uploaded. This File is usable in the rest of our platform as a regular File object.  For certain &#x60;purpose&#x60; values, the correct &#x60;mime_type&#x60; must be specified.  Please refer to documentation for the  [supported MIME types for your use case](/docs/assistants/tools/file-search#supported-files).  For guidance on the proper filename extensions for each purpose, please follow the documentation on [creating a File](/docs/api-reference/files/create). 
+[**createUpload**](UploadsApi.md#createupload) | **POST** /uploads | Creates an intermediate [Upload](/docs/api-reference/uploads/object) object that you can add [Parts](/docs/api-reference/uploads/part-object) to. Currently, an Upload can accept at most 8 GB in total and expires after an hour after you create it.  Once you complete the Upload, we will create a [File](/docs/api-reference/files/object) object that contains all the parts you uploaded. This File is usable in the rest of our platform as a regular File object.  For certain `purpose` values, the correct `mime_type` must be specified.  Please refer to documentation for the  [supported MIME types for your use case](/docs/assistants/tools/file-search#supported-files).  For guidance on the proper filename extensions for each purpose, please follow the documentation on [creating a File](/docs/api-reference/files/create). 
 
 
 # **addUploadPart**
@@ -23,15 +23,21 @@ Adds a [Part](/docs/api-reference/uploads/part-object) to an [Upload](/docs/api-
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUploadsApi();
-final String uploadId = upload_abc123; // String | The ID of the Upload. 
-final MultipartFile data = BINARY_DATA_HERE; // MultipartFile | The chunk of bytes for this Part. 
+final api_instance = UploadsApi();
+final uploadId = upload_abc123; // String | The ID of the Upload. 
+final data = BINARY_DATA_HERE; // MultipartFile | The chunk of bytes for this Part. 
 
 try {
-    final response = api.addUploadPart(uploadId, data);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.addUploadPart(uploadId, data);
+    print(result);
+} catch (e) {
     print('Exception when calling UploadsApi->addUploadPart: $e\n');
 }
 ```
@@ -66,14 +72,20 @@ Cancels the Upload. No Parts may be added after an Upload is cancelled.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUploadsApi();
-final String uploadId = upload_abc123; // String | The ID of the Upload. 
+final api_instance = UploadsApi();
+final uploadId = upload_abc123; // String | The ID of the Upload. 
 
 try {
-    final response = api.cancelUpload(uploadId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.cancelUpload(uploadId);
+    print(result);
+} catch (e) {
     print('Exception when calling UploadsApi->cancelUpload: $e\n');
 }
 ```
@@ -107,15 +119,21 @@ Completes the [Upload](/docs/api-reference/uploads/object).   Within the returne
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUploadsApi();
-final String uploadId = upload_abc123; // String | The ID of the Upload. 
-final CompleteUploadRequest completeUploadRequest = ; // CompleteUploadRequest | 
+final api_instance = UploadsApi();
+final uploadId = upload_abc123; // String | The ID of the Upload. 
+final completeUploadRequest = CompleteUploadRequest(); // CompleteUploadRequest | 
 
 try {
-    final response = api.completeUpload(uploadId, completeUploadRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.completeUpload(uploadId, completeUploadRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling UploadsApi->completeUpload: $e\n');
 }
 ```
@@ -150,14 +168,20 @@ Creates an intermediate [Upload](/docs/api-reference/uploads/object) object that
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getUploadsApi();
-final CreateUploadRequest createUploadRequest = ; // CreateUploadRequest | 
+final api_instance = UploadsApi();
+final createUploadRequest = CreateUploadRequest(); // CreateUploadRequest | 
 
 try {
-    final response = api.createUpload(createUploadRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createUpload(createUploadRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling UploadsApi->createUpload: $e\n');
 }
 ```

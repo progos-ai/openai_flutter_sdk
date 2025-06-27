@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for EvalResponsesSource
 void main() {
-  final instance = EvalResponsesSourceBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = EvalResponsesSource();
 
-  group(EvalResponsesSource, () {
+  group('test EvalResponsesSource', () {
     // The type of run data source. Always `responses`.
     // String type
     test('to test the property `type`', () async {
@@ -14,7 +23,7 @@ void main() {
     });
 
     // Metadata filter for the responses. This is a query parameter used to select responses.
-    // JsonObject metadata
+    // Object metadata
     test('to test the property `metadata`', () async {
       // TODO
     });
@@ -62,16 +71,18 @@ void main() {
     });
 
     // List of user identifiers. This is a query parameter used to select responses.
-    // BuiltList<String> users
+    // List<String> users (default value: const [])
     test('to test the property `users`', () async {
       // TODO
     });
 
     // List of tool names. This is a query parameter used to select responses.
-    // BuiltList<String> tools
+    // List<String> tools (default value: const [])
     test('to test the property `tools`', () async {
       // TODO
     });
 
+
   });
+
 }

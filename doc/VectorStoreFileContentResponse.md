@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The object type, which is always `vector_store.file_content.page` | 
-**data** | [**BuiltList&lt;VectorStoreFileContentResponseDataInner&gt;**](VectorStoreFileContentResponseDataInner.md) | Parsed content of the file. | 
+**data** | [**List<VectorStoreFileContentResponseDataInner>**](VectorStoreFileContentResponseDataInner.md) | Parsed content of the file. | [default to const []]
 **hasMore** | **bool** | Indicates if there are more content pages to fetch. | 
 **nextPage** | **String** | The token for the next page, if any. | 
 

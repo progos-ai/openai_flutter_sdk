@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **start** | **double** | Start time of the segment in seconds. | 
 **end** | **double** | End time of the segment in seconds. | 
 **text** | **String** | Text content of the segment. | 
-**tokens** | **BuiltList&lt;int&gt;** | Array of token IDs for the text content. | 
+**tokens** | **List<int>** | Array of token IDs for the text content. | [default to const []]
 **temperature** | **double** | Temperature parameter used for generating the segment. | 
 **avgLogprob** | **double** | Average logprob of the segment. If the value is lower than -1, consider the logprobs failed. | 
 **compressionRatio** | **double** | Compression ratio of the segment. If the value is greater than 2.4, consider the compression failed. | 

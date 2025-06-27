@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **token** | **String** |  | 
 **logprob** | **num** |  | 
-**bytes** | **BuiltList&lt;int&gt;** |  | 
+**bytes** | **List<int>** |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,14 +23,20 @@ Delete an invite. If the invite has already been accepted, it cannot be deleted.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getInvitesApi();
-final String inviteId = inviteId_example; // String | The ID of the invite to delete.
+final api_instance = InvitesApi();
+final inviteId = inviteId_example; // String | The ID of the invite to delete.
 
 try {
-    final response = api.deleteInvite(inviteId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteInvite(inviteId);
+    print(result);
+} catch (e) {
     print('Exception when calling InvitesApi->deleteInvite: $e\n');
 }
 ```
@@ -64,14 +70,20 @@ Create an invite for a user to the organization. The invite must be accepted by 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getInvitesApi();
-final InviteRequest inviteRequest = ; // InviteRequest | The invite request payload.
+final api_instance = InvitesApi();
+final inviteRequest = InviteRequest(); // InviteRequest | The invite request payload.
 
 try {
-    final response = api.inviteUser(inviteRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.inviteUser(inviteRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling InvitesApi->inviteUser: $e\n');
 }
 ```
@@ -105,15 +117,21 @@ Returns a list of invites in the organization.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getInvitesApi();
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final api_instance = InvitesApi();
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
 
 try {
-    final response = api.listInvites(limit, after);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listInvites(limit, after);
+    print(result);
+} catch (e) {
     print('Exception when calling InvitesApi->listInvites: $e\n');
 }
 ```
@@ -148,14 +166,20 @@ Retrieves an invite.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getInvitesApi();
-final String inviteId = inviteId_example; // String | The ID of the invite to retrieve.
+final api_instance = InvitesApi();
+final inviteId = inviteId_example; // String | The ID of the invite to retrieve.
 
 try {
-    final response = api.retrieveInvite(inviteId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveInvite(inviteId);
+    print(result);
+} catch (e) {
     print('Exception when calling InvitesApi->retrieveInvite: $e\n');
 }
 ```

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **invitedAt** | **int** | The Unix timestamp (in seconds) of when the invite was sent. | 
 **expiresAt** | **int** | The Unix timestamp (in seconds) of when the invite expires. | 
 **acceptedAt** | **int** | The Unix timestamp (in seconds) of when the invite was accepted. | [optional] 
-**projects** | [**BuiltList&lt;InviteProjectsInner&gt;**](InviteProjectsInner.md) | The projects that were granted membership upon acceptance of the invite. | [optional] 
+**projects** | [**List<InviteProjectsInner>**](InviteProjectsInner.md) | The projects that were granted membership upon acceptance of the invite. | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

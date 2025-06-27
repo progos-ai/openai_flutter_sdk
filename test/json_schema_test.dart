@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for JSONSchema
 void main() {
-  final instance = JSONSchemaBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = JSONSchema();
 
-  group(JSONSchema, () {
+  group('test JSONSchema', () {
     // A description of what the response format is for, used by the model to determine how to respond in the format. 
     // String description
     test('to test the property `description`', () async {
@@ -20,7 +29,7 @@ void main() {
     });
 
     // The schema for the response format, described as a JSON Schema object. Learn how to build JSON schemas [here](https://json-schema.org/). 
-    // BuiltMap<String, JsonObject> schema
+    // Map<String, Object> schema (default value: const {})
     test('to test the property `schema`', () async {
       // TODO
     });
@@ -31,5 +40,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | A unique identifier for the chat completion. | 
-**choices** | [**BuiltList&lt;CreateChatCompletionResponseChoicesInner&gt;**](CreateChatCompletionResponseChoicesInner.md) | A list of chat completion choices. Can be more than one if `n` is greater than 1. | 
+**choices** | [**List<CreateChatCompletionResponseChoicesInner>**](CreateChatCompletionResponseChoicesInner.md) | A list of chat completion choices. Can be more than one if `n` is greater than 1. | [default to const []]
 **created** | **int** | The Unix timestamp (in seconds) of when the chat completion was created. | 
 **model** | **String** | The model used for the chat completion. | 
 **serviceTier** | [**ServiceTier**](ServiceTier.md) |  | [optional] 

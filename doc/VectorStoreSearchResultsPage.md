@@ -9,8 +9,8 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The object type, which is always `vector_store.search_results.page` | 
-**searchQuery** | **BuiltList&lt;String&gt;** |  | 
-**data** | [**BuiltList&lt;VectorStoreSearchResultItem&gt;**](VectorStoreSearchResultItem.md) | The list of search result items. | 
+**searchQuery** | **List<String>** |  | [default to const []]
+**data** | [**List<VectorStoreSearchResultItem>**](VectorStoreSearchResultItem.md) | The list of search result items. | [default to const []]
 **hasMore** | **bool** | Indicates if there are more results to fetch. | 
 **nextPage** | **String** | The token for the next page, if any. | 
 

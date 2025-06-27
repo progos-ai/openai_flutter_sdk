@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The type of object returned, must be 'list'. | 
-**data** | [**BuiltList&lt;ContainerResource&gt;**](ContainerResource.md) | A list of containers. | 
+**data** | [**List<ContainerResource>**](ContainerResource.md) | A list of containers. | [default to const []]
 **firstId** | **String** | The ID of the first container in the list. | 
 **lastId** | **String** | The ID of the last container in the list. | 
 **hasMore** | **bool** | Whether there are more containers available. | 

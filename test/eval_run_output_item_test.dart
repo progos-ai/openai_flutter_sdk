@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for EvalRunOutputItem
 void main() {
-  final instance = EvalRunOutputItemBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = EvalRunOutputItem();
 
-  group(EvalRunOutputItem, () {
+  group('test EvalRunOutputItem', () {
     // The type of the object. Always \"eval.run.output_item\".
     // String object (default value: 'eval.run.output_item')
     test('to test the property `object`', () async {
@@ -50,13 +59,13 @@ void main() {
     });
 
     // Details of the input data source item.
-    // BuiltMap<String, JsonObject> datasourceItem
+    // Map<String, Object> datasourceItem (default value: const {})
     test('to test the property `datasourceItem`', () async {
       // TODO
     });
 
     // A list of results from the evaluation run.
-    // BuiltList<BuiltMap<String, JsonObject>> results
+    // List<Map<String, Object>> results (default value: const [])
     test('to test the property `results`', () async {
       // TODO
     });
@@ -66,5 +75,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

@@ -1,12 +1,22 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 
 /// tests for AssistantsApi
 void main() {
-  final instance = OpenaiFlutterSdk().getAssistantsApi();
+  // final instance = AssistantsApi();
 
-  group(AssistantsApi, () {
+  group('tests for AssistantsApi', () {
     // Cancels a run that is `in_progress`.
     //
     //Future<RunObject> cancelRun(String threadId, String runId) async
@@ -30,7 +40,7 @@ void main() {
 
     // Create a run.
     //
-    //Future<RunObject> createRun(String threadId, CreateRunRequest createRunRequest, { BuiltList<String> includeLeftSquareBracketRightSquareBracket }) async
+    //Future<RunObject> createRun(String threadId, CreateRunRequest createRunRequest, { List<String> includeLeftSquareBracketRightSquareBracket }) async
     test('test createRun', () async {
       // TODO
     });
@@ -93,7 +103,7 @@ void main() {
 
     // Retrieves a run step.
     //
-    //Future<RunStepObject> getRunStep(String threadId, String runId, String stepId, { BuiltList<String> includeLeftSquareBracketRightSquareBracket }) async
+    //Future<RunStepObject> getRunStep(String threadId, String runId, String stepId, { List<String> includeLeftSquareBracketRightSquareBracket }) async
     test('test getRunStep', () async {
       // TODO
     });
@@ -121,7 +131,7 @@ void main() {
 
     // Returns a list of run steps belonging to a run.
     //
-    //Future<ListRunStepsResponse> listRunSteps(String threadId, String runId, { int limit, String order, String after, String before, BuiltList<String> includeLeftSquareBracketRightSquareBracket }) async
+    //Future<ListRunStepsResponse> listRunSteps(String threadId, String runId, { int limit, String order, String after, String before, List<String> includeLeftSquareBracketRightSquareBracket }) async
     test('test listRunSteps', () async {
       // TODO
     });

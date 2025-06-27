@@ -1,12 +1,22 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 
 /// tests for FineTuningApi
 void main() {
-  final instance = OpenaiFlutterSdk().getFineTuningApi();
+  // final instance = FineTuningApi();
 
-  group(FineTuningApi, () {
+  group('tests for FineTuningApi', () {
     // Immediately cancel a fine-tune job. 
     //
     //Future<FineTuningJob> cancelFineTuningJob(String fineTuningJobId) async
@@ -58,7 +68,7 @@ void main() {
 
     // List your organization's fine-tuning jobs 
     //
-    //Future<ListPaginatedFineTuningJobsResponse> listPaginatedFineTuningJobs({ String after, int limit, BuiltMap<String, String> metadata }) async
+    //Future<ListPaginatedFineTuningJobsResponse> listPaginatedFineTuningJobs({ String after, int limit, Map<String, String> metadata }) async
     test('test listPaginatedFineTuningJobs', () async {
       // TODO
     });

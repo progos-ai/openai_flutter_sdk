@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateChatCompletionRequestAllOfAudio
 void main() {
-  final instance = CreateChatCompletionRequestAllOfAudioBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateChatCompletionRequestAllOfAudio();
 
-  group(CreateChatCompletionRequestAllOfAudio, () {
+  group('test CreateChatCompletionRequestAllOfAudio', () {
     // The voice the model uses to respond. Supported voices are  `alloy`, `ash`, `ballad`, `coral`, `echo`, `fable`, `nova`, `onyx`, `sage`, and `shimmer`. 
     // VoiceIdsShared voice
     test('to test the property `voice`', () async {
@@ -19,5 +28,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

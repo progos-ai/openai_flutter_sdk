@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **token** | **String** |  | 
 **logprob** | **num** |  | 
-**bytes** | **BuiltList&lt;int&gt;** |  | 
-**topLogprobs** | [**BuiltList&lt;TopLogProb&gt;**](TopLogProb.md) |  | 
+**bytes** | **List<int>** |  | [default to const []]
+**topLogprobs** | [**List<TopLogProb>**](TopLogProb.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

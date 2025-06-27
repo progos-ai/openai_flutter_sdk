@@ -1,31 +1,42 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateCompletionResponseChoicesInnerLogprobs
 void main() {
-  final instance = CreateCompletionResponseChoicesInnerLogprobsBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateCompletionResponseChoicesInnerLogprobs();
 
-  group(CreateCompletionResponseChoicesInnerLogprobs, () {
-    // BuiltList<int> textOffset
+  group('test CreateCompletionResponseChoicesInnerLogprobs', () {
+    // List<int> textOffset (default value: const [])
     test('to test the property `textOffset`', () async {
       // TODO
     });
 
-    // BuiltList<num> tokenLogprobs
+    // List<num> tokenLogprobs (default value: const [])
     test('to test the property `tokenLogprobs`', () async {
       // TODO
     });
 
-    // BuiltList<String> tokens
+    // List<String> tokens (default value: const [])
     test('to test the property `tokens`', () async {
       // TODO
     });
 
-    // BuiltList<BuiltMap<String, num>> topLogprobs
+    // List<Map<String, num>> topLogprobs (default value: const [])
     test('to test the property `topLogprobs`', () async {
       // TODO
     });
 
+
   });
+
 }

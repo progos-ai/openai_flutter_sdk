@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**listFineTuningCheckpointPermissions**](FineTuningApi.md#listfinetuningcheckpointpermissions) | **GET** /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions | **NOTE:** This endpoint requires an [admin API key](../admin-api-keys).  Organization owners can use this endpoint to view all permissions for a fine-tuned model checkpoint. 
 [**listFineTuningEvents**](FineTuningApi.md#listfinetuningevents) | **GET** /fine_tuning/jobs/{fine_tuning_job_id}/events | Get status updates for a fine-tuning job. 
 [**listFineTuningJobCheckpoints**](FineTuningApi.md#listfinetuningjobcheckpoints) | **GET** /fine_tuning/jobs/{fine_tuning_job_id}/checkpoints | List checkpoints for a fine-tuning job. 
-[**listPaginatedFineTuningJobs**](FineTuningApi.md#listpaginatedfinetuningjobs) | **GET** /fine_tuning/jobs | List your organization&#39;s fine-tuning jobs 
+[**listPaginatedFineTuningJobs**](FineTuningApi.md#listpaginatedfinetuningjobs) | **GET** /fine_tuning/jobs | List your organization's fine-tuning jobs 
 [**pauseFineTuningJob**](FineTuningApi.md#pausefinetuningjob) | **POST** /fine_tuning/jobs/{fine_tuning_job_id}/pause | Pause a fine-tune job. 
 [**resumeFineTuningJob**](FineTuningApi.md#resumefinetuningjob) | **POST** /fine_tuning/jobs/{fine_tuning_job_id}/resume | Resume a fine-tune job. 
 [**retrieveFineTuningJob**](FineTuningApi.md#retrievefinetuningjob) | **GET** /fine_tuning/jobs/{fine_tuning_job_id} | Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/model-optimization) 
@@ -32,14 +32,20 @@ Immediately cancel a fine-tune job.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to cancel. 
+final api_instance = FineTuningApi();
+final fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to cancel. 
 
 try {
-    final response = api.cancelFineTuningJob(fineTuningJobId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.cancelFineTuningJob(fineTuningJobId);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->cancelFineTuningJob: $e\n');
 }
 ```
@@ -73,15 +79,21 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTunedModelCheckpoint = ft:gpt-4o-mini-2024-07-18:org:weather:B7R9VjQd; // String | The ID of the fine-tuned model checkpoint to create a permission for. 
-final CreateFineTuningCheckpointPermissionRequest createFineTuningCheckpointPermissionRequest = ; // CreateFineTuningCheckpointPermissionRequest | 
+final api_instance = FineTuningApi();
+final fineTunedModelCheckpoint = ft:gpt-4o-mini-2024-07-18:org:weather:B7R9VjQd; // String | The ID of the fine-tuned model checkpoint to create a permission for. 
+final createFineTuningCheckpointPermissionRequest = CreateFineTuningCheckpointPermissionRequest(); // CreateFineTuningCheckpointPermissionRequest | 
 
 try {
-    final response = api.createFineTuningCheckpointPermission(fineTunedModelCheckpoint, createFineTuningCheckpointPermissionRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createFineTuningCheckpointPermission(fineTunedModelCheckpoint, createFineTuningCheckpointPermissionRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->createFineTuningCheckpointPermission: $e\n');
 }
 ```
@@ -116,14 +128,20 @@ Creates a fine-tuning job which begins the process of creating a new model from 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final CreateFineTuningJobRequest createFineTuningJobRequest = ; // CreateFineTuningJobRequest | 
+final api_instance = FineTuningApi();
+final createFineTuningJobRequest = CreateFineTuningJobRequest(); // CreateFineTuningJobRequest | 
 
 try {
-    final response = api.createFineTuningJob(createFineTuningJobRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createFineTuningJob(createFineTuningJobRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->createFineTuningJob: $e\n');
 }
 ```
@@ -157,15 +175,21 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTunedModelCheckpoint = ft:gpt-4o-mini-2024-07-18:org:weather:B7R9VjQd; // String | The ID of the fine-tuned model checkpoint to delete a permission for. 
-final String permissionId = cp_zc4Q7MP6XxulcVzj4MZdwsAB; // String | The ID of the fine-tuned model checkpoint permission to delete. 
+final api_instance = FineTuningApi();
+final fineTunedModelCheckpoint = ft:gpt-4o-mini-2024-07-18:org:weather:B7R9VjQd; // String | The ID of the fine-tuned model checkpoint to delete a permission for. 
+final permissionId = cp_zc4Q7MP6XxulcVzj4MZdwsAB; // String | The ID of the fine-tuned model checkpoint permission to delete. 
 
 try {
-    final response = api.deleteFineTuningCheckpointPermission(fineTunedModelCheckpoint, permissionId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteFineTuningCheckpointPermission(fineTunedModelCheckpoint, permissionId);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->deleteFineTuningCheckpointPermission: $e\n');
 }
 ```
@@ -200,18 +224,24 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTunedModelCheckpoint = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuned model checkpoint to get permissions for. 
-final String projectId = projectId_example; // String | The ID of the project to get permissions for.
-final String after = after_example; // String | Identifier for the last permission ID from the previous pagination request.
-final int limit = 56; // int | Number of permissions to retrieve.
-final String order = order_example; // String | The order in which to retrieve permissions.
+final api_instance = FineTuningApi();
+final fineTunedModelCheckpoint = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuned model checkpoint to get permissions for. 
+final projectId = projectId_example; // String | The ID of the project to get permissions for.
+final after = after_example; // String | Identifier for the last permission ID from the previous pagination request.
+final limit = 56; // int | Number of permissions to retrieve.
+final order = order_example; // String | The order in which to retrieve permissions.
 
 try {
-    final response = api.listFineTuningCheckpointPermissions(fineTunedModelCheckpoint, projectId, after, limit, order);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listFineTuningCheckpointPermissions(fineTunedModelCheckpoint, projectId, after, limit, order);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->listFineTuningCheckpointPermissions: $e\n');
 }
 ```
@@ -249,16 +279,22 @@ Get status updates for a fine-tuning job.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to get events for. 
-final String after = after_example; // String | Identifier for the last event from the previous pagination request.
-final int limit = 56; // int | Number of events to retrieve.
+final api_instance = FineTuningApi();
+final fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to get events for. 
+final after = after_example; // String | Identifier for the last event from the previous pagination request.
+final limit = 56; // int | Number of events to retrieve.
 
 try {
-    final response = api.listFineTuningEvents(fineTuningJobId, after, limit);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listFineTuningEvents(fineTuningJobId, after, limit);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->listFineTuningEvents: $e\n');
 }
 ```
@@ -294,16 +330,22 @@ List checkpoints for a fine-tuning job.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to get checkpoints for. 
-final String after = after_example; // String | Identifier for the last checkpoint ID from the previous pagination request.
-final int limit = 56; // int | Number of checkpoints to retrieve.
+final api_instance = FineTuningApi();
+final fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to get checkpoints for. 
+final after = after_example; // String | Identifier for the last checkpoint ID from the previous pagination request.
+final limit = 56; // int | Number of checkpoints to retrieve.
 
 try {
-    final response = api.listFineTuningJobCheckpoints(fineTuningJobId, after, limit);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listFineTuningJobCheckpoints(fineTuningJobId, after, limit);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->listFineTuningJobCheckpoints: $e\n');
 }
 ```
@@ -339,16 +381,22 @@ List your organization's fine-tuning jobs
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String after = after_example; // String | Identifier for the last job from the previous pagination request.
-final int limit = 56; // int | Number of fine-tuning jobs to retrieve.
-final BuiltMap<String, String> metadata = Object; // BuiltMap<String, String> | Optional metadata filter. To filter, use the syntax `metadata[k]=v`. Alternatively, set `metadata=null` to indicate no metadata. 
+final api_instance = FineTuningApi();
+final after = after_example; // String | Identifier for the last job from the previous pagination request.
+final limit = 56; // int | Number of fine-tuning jobs to retrieve.
+final metadata = Object; // Map<String, String> | Optional metadata filter. To filter, use the syntax `metadata[k]=v`. Alternatively, set `metadata=null` to indicate no metadata. 
 
 try {
-    final response = api.listPaginatedFineTuningJobs(after, limit, metadata);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listPaginatedFineTuningJobs(after, limit, metadata);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->listPaginatedFineTuningJobs: $e\n');
 }
 ```
@@ -359,7 +407,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **after** | **String**| Identifier for the last job from the previous pagination request. | [optional] 
  **limit** | **int**| Number of fine-tuning jobs to retrieve. | [optional] [default to 20]
- **metadata** | [**BuiltMap&lt;String, String&gt;**](String.md)| Optional metadata filter. To filter, use the syntax `metadata[k]=v`. Alternatively, set `metadata=null` to indicate no metadata.  | [optional] 
+ **metadata** | [**Map<String, String>**](String.md)| Optional metadata filter. To filter, use the syntax `metadata[k]=v`. Alternatively, set `metadata=null` to indicate no metadata.  | [optional] [default to const {}]
 
 ### Return type
 
@@ -384,14 +432,20 @@ Pause a fine-tune job.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to pause. 
+final api_instance = FineTuningApi();
+final fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to pause. 
 
 try {
-    final response = api.pauseFineTuningJob(fineTuningJobId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.pauseFineTuningJob(fineTuningJobId);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->pauseFineTuningJob: $e\n');
 }
 ```
@@ -425,14 +479,20 @@ Resume a fine-tune job.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to resume. 
+final api_instance = FineTuningApi();
+final fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job to resume. 
 
 try {
-    final response = api.resumeFineTuningJob(fineTuningJobId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.resumeFineTuningJob(fineTuningJobId);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->resumeFineTuningJob: $e\n');
 }
 ```
@@ -466,14 +526,20 @@ Get info about a fine-tuning job.  [Learn more about fine-tuning](/docs/guides/m
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final String fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job. 
+final api_instance = FineTuningApi();
+final fineTuningJobId = ft-AF1WoRqd3aJAHsqc9NY7iL8F; // String | The ID of the fine-tuning job. 
 
 try {
-    final response = api.retrieveFineTuningJob(fineTuningJobId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveFineTuningJob(fineTuningJobId);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->retrieveFineTuningJob: $e\n');
 }
 ```
@@ -507,14 +573,20 @@ Run a grader.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final RunGraderRequest runGraderRequest = ; // RunGraderRequest | 
+final api_instance = FineTuningApi();
+final runGraderRequest = RunGraderRequest(); // RunGraderRequest | 
 
 try {
-    final response = api.runGrader(runGraderRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.runGrader(runGraderRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->runGrader: $e\n');
 }
 ```
@@ -548,14 +620,20 @@ Validate a grader.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFineTuningApi();
-final ValidateGraderRequest validateGraderRequest = ; // ValidateGraderRequest | 
+final api_instance = FineTuningApi();
+final validateGraderRequest = ValidateGraderRequest(); // ValidateGraderRequest | 
 
 try {
-    final response = api.validateGrader(validateGraderRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.validateGrader(validateGraderRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling FineTuningApi->validateGrader: $e\n');
 }
 ```

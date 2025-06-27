@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateFineTuningJobRequest
 void main() {
-  final instance = CreateFineTuningJobRequestBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateFineTuningJobRequest();
 
-  group(CreateFineTuningJobRequest, () {
+  group('test CreateFineTuningJobRequest', () {
     // CreateFineTuningJobRequestModel model
     test('to test the property `model`', () async {
       // TODO
@@ -36,7 +45,7 @@ void main() {
     });
 
     // A list of integrations to enable for your fine-tuning job.
-    // BuiltList<CreateFineTuningJobRequestIntegrationsInner> integrations
+    // List<CreateFineTuningJobRequestIntegrationsInner> integrations (default value: const [])
     test('to test the property `integrations`', () async {
       // TODO
     });
@@ -53,10 +62,12 @@ void main() {
     });
 
     // Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters. 
-    // BuiltMap<String, String> metadata
+    // Map<String, String> metadata (default value: const {})
     test('to test the property `metadata`', () async {
       // TODO
     });
 
+
   });
+
 }

@@ -9,8 +9,8 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **input** | [**FineTunePreferenceRequestInputInput**](FineTunePreferenceRequestInputInput.md) |  | [optional] 
-**preferredOutput** | [**BuiltList&lt;ChatCompletionRequestAssistantMessage&gt;**](ChatCompletionRequestAssistantMessage.md) | The preferred completion message for the output. | [optional] 
-**nonPreferredOutput** | [**BuiltList&lt;ChatCompletionRequestAssistantMessage&gt;**](ChatCompletionRequestAssistantMessage.md) | The non-preferred completion message for the output. | [optional] 
+**preferredOutput** | [**List<ChatCompletionRequestAssistantMessage>**](ChatCompletionRequestAssistantMessage.md) | The preferred completion message for the output. | [optional] [default to const []]
+**nonPreferredOutput** | [**List<ChatCompletionRequestAssistantMessage>**](ChatCompletionRequestAssistantMessage.md) | The non-preferred completion message for the output. | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

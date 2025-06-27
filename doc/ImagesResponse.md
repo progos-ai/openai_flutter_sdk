@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **int** | The Unix timestamp (in seconds) of when the image was created. | 
-**data** | [**BuiltList&lt;Image&gt;**](Image.md) | The list of generated images. | [optional] 
+**data** | [**List<Image>**](Image.md) | The list of generated images. | [optional] [default to const []]
 **background** | **String** | The background parameter used for the image generation. Either `transparent` or `opaque`. | [optional] 
 **outputFormat** | **String** | The output format of the image generation. Either `png`, `webp`, or `jpeg`. | [optional] 
 **size** | **String** | The size of the image generated. Either `1024x1024`, `1024x1536`, or `1536x1024`. | [optional] 

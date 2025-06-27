@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** |  | [optional] 
-**data** | [**BuiltList&lt;AdminApiKey&gt;**](AdminApiKey.md) |  | [optional] 
+**data** | [**List<AdminApiKey>**](AdminApiKey.md) |  | [optional] [default to const []]
 **hasMore** | **bool** |  | [optional] 
 **firstId** | **String** |  | [optional] 
 **lastId** | **String** |  | [optional] 

@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** |  | 
-**data** | [**BuiltList&lt;ProjectRateLimit&gt;**](ProjectRateLimit.md) |  | 
+**data** | [**List<ProjectRateLimit>**](ProjectRateLimit.md) |  | [default to const []]
 **firstId** | **String** |  | 
 **lastId** | **String** |  | 
 **hasMore** | **bool** |  | 

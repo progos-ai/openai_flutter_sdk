@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for GraderScoreModel
 void main() {
-  //final instance = GraderScoreModelBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = GraderScoreModel();
 
-  group(GraderScoreModel, () {
+  group('test GraderScoreModel', () {
     // The object type, which is always `score_model`.
     // String type
     test('to test the property `type`', () async {
@@ -26,22 +35,24 @@ void main() {
     });
 
     // The sampling parameters for the model.
-    // JsonObject samplingParams
+    // Object samplingParams
     test('to test the property `samplingParams`', () async {
       // TODO
     });
 
     // The input text. This may include template strings.
-    // BuiltList<EvalItem> input
+    // List<EvalItem> input (default value: const [])
     test('to test the property `input`', () async {
       // TODO
     });
 
     // The range of the score. Defaults to `[0, 1]`.
-    // BuiltList<num> range
+    // List<num> range (default value: const [])
     test('to test the property `range`', () async {
       // TODO
     });
 
+
   });
+
 }

@@ -10,7 +10,7 @@ All URIs are relative to *https://api.openai.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancelEvalRun**](EvalsApi.md#cancelevalrun) | **POST** /evals/{eval_id}/runs/{run_id} | Cancel an ongoing evaluation run. 
-[**createEval**](EvalsApi.md#createeval) | **POST** /evals | Create the structure of an evaluation that can be used to test a model&#39;s performance. An evaluation is a set of testing criteria and the config for a data source, which dictates the schema of the data used in the evaluation. After creating an evaluation, you can run it on different models and model parameters. We support several types of graders and datasources. For more information, see the [Evals guide](/docs/guides/evals). 
+[**createEval**](EvalsApi.md#createeval) | **POST** /evals | Create the structure of an evaluation that can be used to test a model's performance. An evaluation is a set of testing criteria and the config for a data source, which dictates the schema of the data used in the evaluation. After creating an evaluation, you can run it on different models and model parameters. We support several types of graders and datasources. For more information, see the [Evals guide](/docs/guides/evals). 
 [**createEvalRun**](EvalsApi.md#createevalrun) | **POST** /evals/{eval_id}/runs | Kicks off a new run for a given evaluation, specifying the data source, and what model configuration to use to test. The datasource will be validated against the schema specified in the config of the evaluation. 
 [**deleteEval**](EvalsApi.md#deleteeval) | **DELETE** /evals/{eval_id} | Delete an evaluation. 
 [**deleteEvalRun**](EvalsApi.md#deleteevalrun) | **DELETE** /evals/{eval_id}/runs/{run_id} | Delete an eval run. 
@@ -31,15 +31,21 @@ Cancel an ongoing evaluation run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation whose run you want to cancel.
-final String runId = runId_example; // String | The ID of the run to cancel.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation whose run you want to cancel.
+final runId = runId_example; // String | The ID of the run to cancel.
 
 try {
-    final response = api.cancelEvalRun(evalId, runId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.cancelEvalRun(evalId, runId);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->cancelEvalRun: $e\n');
 }
 ```
@@ -74,14 +80,20 @@ Create the structure of an evaluation that can be used to test a model's perform
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final CreateEvalRequest createEvalRequest = ; // CreateEvalRequest | 
+final api_instance = EvalsApi();
+final createEvalRequest = CreateEvalRequest(); // CreateEvalRequest | 
 
 try {
-    final response = api.createEval(createEvalRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createEval(createEvalRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->createEval: $e\n');
 }
 ```
@@ -115,15 +127,21 @@ Kicks off a new run for a given evaluation, specifying the data source, and what
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to create a run for.
-final CreateEvalRunRequest createEvalRunRequest = ; // CreateEvalRunRequest | 
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to create a run for.
+final createEvalRunRequest = CreateEvalRunRequest(); // CreateEvalRunRequest | 
 
 try {
-    final response = api.createEvalRun(evalId, createEvalRunRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createEvalRun(evalId, createEvalRunRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->createEvalRun: $e\n');
 }
 ```
@@ -158,14 +176,20 @@ Delete an evaluation.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to delete.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to delete.
 
 try {
-    final response = api.deleteEval(evalId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteEval(evalId);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->deleteEval: $e\n');
 }
 ```
@@ -199,15 +223,21 @@ Delete an eval run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to delete the run from.
-final String runId = runId_example; // String | The ID of the run to delete.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to delete the run from.
+final runId = runId_example; // String | The ID of the run to delete.
 
 try {
-    final response = api.deleteEvalRun(evalId, runId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteEvalRun(evalId, runId);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->deleteEvalRun: $e\n');
 }
 ```
@@ -242,14 +272,20 @@ Get an evaluation by ID.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to retrieve.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to retrieve.
 
 try {
-    final response = api.getEval(evalId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getEval(evalId);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->getEval: $e\n');
 }
 ```
@@ -283,15 +319,21 @@ Get an evaluation run by ID.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
-final String runId = runId_example; // String | The ID of the run to retrieve.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
+final runId = runId_example; // String | The ID of the run to retrieve.
 
 try {
-    final response = api.getEvalRun(evalId, runId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getEvalRun(evalId, runId);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->getEvalRun: $e\n');
 }
 ```
@@ -326,16 +368,22 @@ Get an evaluation run output item by ID.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
-final String runId = runId_example; // String | The ID of the run to retrieve.
-final String outputItemId = outputItemId_example; // String | The ID of the output item to retrieve.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
+final runId = runId_example; // String | The ID of the run to retrieve.
+final outputItemId = outputItemId_example; // String | The ID of the output item to retrieve.
 
 try {
-    final response = api.getEvalRunOutputItem(evalId, runId, outputItemId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getEvalRunOutputItem(evalId, runId, outputItemId);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->getEvalRunOutputItem: $e\n');
 }
 ```
@@ -371,19 +419,25 @@ Get a list of output items for an evaluation run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
-final String runId = runId_example; // String | The ID of the run to retrieve output items for.
-final String after = after_example; // String | Identifier for the last output item from the previous pagination request.
-final int limit = 56; // int | Number of output items to retrieve.
-final String status = status_example; // String | Filter output items by status. Use `failed` to filter by failed output items or `pass` to filter by passed output items. 
-final String order = order_example; // String | Sort order for output items by timestamp. Use `asc` for ascending order or `desc` for descending order. Defaults to `asc`.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
+final runId = runId_example; // String | The ID of the run to retrieve output items for.
+final after = after_example; // String | Identifier for the last output item from the previous pagination request.
+final limit = 56; // int | Number of output items to retrieve.
+final status = status_example; // String | Filter output items by status. Use `failed` to filter by failed output items or `pass` to filter by passed output items. 
+final order = order_example; // String | Sort order for output items by timestamp. Use `asc` for ascending order or `desc` for descending order. Defaults to `asc`.
 
 try {
-    final response = api.getEvalRunOutputItems(evalId, runId, after, limit, status, order);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getEvalRunOutputItems(evalId, runId, after, limit, status, order);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->getEvalRunOutputItems: $e\n');
 }
 ```
@@ -422,18 +476,24 @@ Get a list of runs for an evaluation.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
-final String after = after_example; // String | Identifier for the last run from the previous pagination request.
-final int limit = 56; // int | Number of runs to retrieve.
-final String order = order_example; // String | Sort order for runs by timestamp. Use `asc` for ascending order or `desc` for descending order. Defaults to `asc`.
-final String status = status_example; // String | Filter runs by status. One of `queued` | `in_progress` | `failed` | `completed` | `canceled`.
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to retrieve runs for.
+final after = after_example; // String | Identifier for the last run from the previous pagination request.
+final limit = 56; // int | Number of runs to retrieve.
+final order = order_example; // String | Sort order for runs by timestamp. Use `asc` for ascending order or `desc` for descending order. Defaults to `asc`.
+final status = status_example; // String | Filter runs by status. One of `queued` | `in_progress` | `failed` | `completed` | `canceled`.
 
 try {
-    final response = api.getEvalRuns(evalId, after, limit, order, status);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getEvalRuns(evalId, after, limit, order, status);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->getEvalRuns: $e\n');
 }
 ```
@@ -471,17 +531,23 @@ List evaluations for a project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String after = after_example; // String | Identifier for the last eval from the previous pagination request.
-final int limit = 56; // int | Number of evals to retrieve.
-final String order = order_example; // String | Sort order for evals by timestamp. Use `asc` for ascending order or `desc` for descending order.
-final String orderBy = orderBy_example; // String | Evals can be ordered by creation time or last updated time. Use `created_at` for creation time or `updated_at` for last updated time. 
+final api_instance = EvalsApi();
+final after = after_example; // String | Identifier for the last eval from the previous pagination request.
+final limit = 56; // int | Number of evals to retrieve.
+final order = order_example; // String | Sort order for evals by timestamp. Use `asc` for ascending order or `desc` for descending order.
+final orderBy = orderBy_example; // String | Evals can be ordered by creation time or last updated time. Use `created_at` for creation time or `updated_at` for last updated time. 
 
 try {
-    final response = api.listEvals(after, limit, order, orderBy);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listEvals(after, limit, order, orderBy);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->listEvals: $e\n');
 }
 ```
@@ -518,15 +584,21 @@ Update certain properties of an evaluation.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getEvalsApi();
-final String evalId = evalId_example; // String | The ID of the evaluation to update.
-final UpdateEvalRequest updateEvalRequest = ; // UpdateEvalRequest | Request to update an evaluation
+final api_instance = EvalsApi();
+final evalId = evalId_example; // String | The ID of the evaluation to update.
+final updateEvalRequest = UpdateEvalRequest(); // UpdateEvalRequest | Request to update an evaluation
 
 try {
-    final response = api.updateEval(evalId, updateEvalRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.updateEval(evalId, updateEvalRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling EvalsApi->updateEval: $e\n');
 }
 ```

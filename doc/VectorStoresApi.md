@@ -35,15 +35,21 @@ Cancel a vector store file batch. This attempts to cancel the processing of file
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the file batch belongs to.
-final String batchId = batchId_example; // String | The ID of the file batch to cancel.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the file batch belongs to.
+final batchId = batchId_example; // String | The ID of the file batch to cancel.
 
 try {
-    final response = api.cancelVectorStoreFileBatch(vectorStoreId, batchId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.cancelVectorStoreFileBatch(vectorStoreId, batchId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->cancelVectorStoreFileBatch: $e\n');
 }
 ```
@@ -78,14 +84,20 @@ Create a vector store.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final CreateVectorStoreRequest createVectorStoreRequest = ; // CreateVectorStoreRequest | 
+final api_instance = VectorStoresApi();
+final createVectorStoreRequest = CreateVectorStoreRequest(); // CreateVectorStoreRequest | 
 
 try {
-    final response = api.createVectorStore(createVectorStoreRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createVectorStore(createVectorStoreRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->createVectorStore: $e\n');
 }
 ```
@@ -119,15 +131,21 @@ Create a vector store file by attaching a [File](/docs/api-reference/files) to a
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store for which to create a File. 
-final CreateVectorStoreFileRequest createVectorStoreFileRequest = ; // CreateVectorStoreFileRequest | 
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store for which to create a File. 
+final createVectorStoreFileRequest = CreateVectorStoreFileRequest(); // CreateVectorStoreFileRequest | 
 
 try {
-    final response = api.createVectorStoreFile(vectorStoreId, createVectorStoreFileRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createVectorStoreFile(vectorStoreId, createVectorStoreFileRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->createVectorStoreFile: $e\n');
 }
 ```
@@ -162,15 +180,21 @@ Create a vector store file batch.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store for which to create a File Batch. 
-final CreateVectorStoreFileBatchRequest createVectorStoreFileBatchRequest = ; // CreateVectorStoreFileBatchRequest | 
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store for which to create a File Batch. 
+final createVectorStoreFileBatchRequest = CreateVectorStoreFileBatchRequest(); // CreateVectorStoreFileBatchRequest | 
 
 try {
-    final response = api.createVectorStoreFileBatch(vectorStoreId, createVectorStoreFileBatchRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createVectorStoreFileBatch(vectorStoreId, createVectorStoreFileBatchRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->createVectorStoreFileBatch: $e\n');
 }
 ```
@@ -205,14 +229,20 @@ Delete a vector store.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store to delete.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store to delete.
 
 try {
-    final response = api.deleteVectorStore(vectorStoreId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteVectorStore(vectorStoreId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->deleteVectorStore: $e\n');
 }
 ```
@@ -246,15 +276,21 @@ Delete a vector store file. This will remove the file from the vector store but 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the file belongs to.
-final String fileId = fileId_example; // String | The ID of the file to delete.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the file belongs to.
+final fileId = fileId_example; // String | The ID of the file to delete.
 
 try {
-    final response = api.deleteVectorStoreFile(vectorStoreId, fileId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteVectorStoreFile(vectorStoreId, fileId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->deleteVectorStoreFile: $e\n');
 }
 ```
@@ -289,14 +325,20 @@ Retrieves a vector store.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store to retrieve.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store to retrieve.
 
 try {
-    final response = api.getVectorStore(vectorStoreId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getVectorStore(vectorStoreId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->getVectorStore: $e\n');
 }
 ```
@@ -330,15 +372,21 @@ Retrieves a vector store file.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store that the file belongs to.
-final String fileId = file-abc123; // String | The ID of the file being retrieved.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store that the file belongs to.
+final fileId = file-abc123; // String | The ID of the file being retrieved.
 
 try {
-    final response = api.getVectorStoreFile(vectorStoreId, fileId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getVectorStoreFile(vectorStoreId, fileId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->getVectorStoreFile: $e\n');
 }
 ```
@@ -373,15 +421,21 @@ Retrieves a vector store file batch.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store that the file batch belongs to.
-final String batchId = vsfb_abc123; // String | The ID of the file batch being retrieved.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store that the file batch belongs to.
+final batchId = vsfb_abc123; // String | The ID of the file batch being retrieved.
 
 try {
-    final response = api.getVectorStoreFileBatch(vectorStoreId, batchId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getVectorStoreFileBatch(vectorStoreId, batchId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->getVectorStoreFileBatch: $e\n');
 }
 ```
@@ -416,20 +470,26 @@ Returns a list of vector store files in a batch.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the files belong to.
-final String batchId = batchId_example; // String | The ID of the file batch that the files belong to.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-final String filter = filter_example; // String | Filter by file status. One of `in_progress`, `completed`, `failed`, `cancelled`.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the files belong to.
+final batchId = batchId_example; // String | The ID of the file batch that the files belong to.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final filter = filter_example; // String | Filter by file status. One of `in_progress`, `completed`, `failed`, `cancelled`.
 
 try {
-    final response = api.listFilesInVectorStoreBatch(vectorStoreId, batchId, limit, order, after, before, filter);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listFilesInVectorStoreBatch(vectorStoreId, batchId, limit, order, after, before, filter);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->listFilesInVectorStoreBatch: $e\n');
 }
 ```
@@ -469,19 +529,25 @@ Returns a list of vector store files.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the files belong to.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-final String filter = filter_example; // String | Filter by file status. One of `in_progress`, `completed`, `failed`, `cancelled`.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store that the files belong to.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final filter = filter_example; // String | Filter by file status. One of `in_progress`, `completed`, `failed`, `cancelled`.
 
 try {
-    final response = api.listVectorStoreFiles(vectorStoreId, limit, order, after, before, filter);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listVectorStoreFiles(vectorStoreId, limit, order, after, before, filter);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->listVectorStoreFiles: $e\n');
 }
 ```
@@ -520,17 +586,23 @@ Returns a list of vector stores.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final api_instance = VectorStoresApi();
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
 
 try {
-    final response = api.listVectorStores(limit, order, after, before);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listVectorStores(limit, order, after, before);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->listVectorStores: $e\n');
 }
 ```
@@ -567,15 +639,21 @@ Modifies a vector store.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vectorStoreId_example; // String | The ID of the vector store to modify.
-final UpdateVectorStoreRequest updateVectorStoreRequest = ; // UpdateVectorStoreRequest | 
+final api_instance = VectorStoresApi();
+final vectorStoreId = vectorStoreId_example; // String | The ID of the vector store to modify.
+final updateVectorStoreRequest = UpdateVectorStoreRequest(); // UpdateVectorStoreRequest | 
 
 try {
-    final response = api.modifyVectorStore(vectorStoreId, updateVectorStoreRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyVectorStore(vectorStoreId, updateVectorStoreRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->modifyVectorStore: $e\n');
 }
 ```
@@ -610,15 +688,21 @@ Retrieve the parsed contents of a vector store file.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store.
-final String fileId = file-abc123; // String | The ID of the file within the vector store.
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store.
+final fileId = file-abc123; // String | The ID of the file within the vector store.
 
 try {
-    final response = api.retrieveVectorStoreFileContent(vectorStoreId, fileId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveVectorStoreFileContent(vectorStoreId, fileId);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->retrieveVectorStoreFileContent: $e\n');
 }
 ```
@@ -653,15 +737,21 @@ Search a vector store for relevant chunks based on a query and file attributes f
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store to search.
-final VectorStoreSearchRequest vectorStoreSearchRequest = ; // VectorStoreSearchRequest | 
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store to search.
+final vectorStoreSearchRequest = VectorStoreSearchRequest(); // VectorStoreSearchRequest | 
 
 try {
-    final response = api.searchVectorStore(vectorStoreId, vectorStoreSearchRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.searchVectorStore(vectorStoreId, vectorStoreSearchRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->searchVectorStore: $e\n');
 }
 ```
@@ -696,16 +786,22 @@ Update attributes on a vector store file.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getVectorStoresApi();
-final String vectorStoreId = vs_abc123; // String | The ID of the vector store the file belongs to.
-final String fileId = file-abc123; // String | The ID of the file to update attributes.
-final UpdateVectorStoreFileAttributesRequest updateVectorStoreFileAttributesRequest = ; // UpdateVectorStoreFileAttributesRequest | 
+final api_instance = VectorStoresApi();
+final vectorStoreId = vs_abc123; // String | The ID of the vector store the file belongs to.
+final fileId = file-abc123; // String | The ID of the file to update attributes.
+final updateVectorStoreFileAttributesRequest = UpdateVectorStoreFileAttributesRequest(); // UpdateVectorStoreFileAttributesRequest | 
 
 try {
-    final response = api.updateVectorStoreFileAttributes(vectorStoreId, fileId, updateVectorStoreFileAttributesRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.updateVectorStoreFileAttributes(vectorStoreId, fileId, updateVectorStoreFileAttributesRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling VectorStoresApi->updateVectorStoreFileAttributes: $e\n');
 }
 ```

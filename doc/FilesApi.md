@@ -9,7 +9,7 @@ All URIs are relative to *https://api.openai.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFile**](FilesApi.md#createfile) | **POST** /files | Upload a file that can be used across various endpoints. Individual files can be up to 512 MB, and the size of all files uploaded by one organization can be up to 100 GB.  The Assistants API supports files up to 2 million tokens and of specific file types. See the [Assistants Tools guide](/docs/assistants/tools) for details.  The Fine-tuning API only supports &#x60;.jsonl&#x60; files. The input also has certain required formats for fine-tuning [chat](/docs/api-reference/fine-tuning/chat-input) or [completions](/docs/api-reference/fine-tuning/completions-input) models.  The Batch API only supports &#x60;.jsonl&#x60; files up to 200 MB in size. The input also has a specific required [format](/docs/api-reference/batch/request-input).  Please [contact us](https://help.openai.com/) if you need to increase these storage limits. 
+[**createFile**](FilesApi.md#createfile) | **POST** /files | Upload a file that can be used across various endpoints. Individual files can be up to 512 MB, and the size of all files uploaded by one organization can be up to 100 GB.  The Assistants API supports files up to 2 million tokens and of specific file types. See the [Assistants Tools guide](/docs/assistants/tools) for details.  The Fine-tuning API only supports `.jsonl` files. The input also has certain required formats for fine-tuning [chat](/docs/api-reference/fine-tuning/chat-input) or [completions](/docs/api-reference/fine-tuning/completions-input) models.  The Batch API only supports `.jsonl` files up to 200 MB in size. The input also has a specific required [format](/docs/api-reference/batch/request-input).  Please [contact us](https://help.openai.com/) if you need to increase these storage limits. 
 [**deleteFile**](FilesApi.md#deletefile) | **DELETE** /files/{file_id} | Delete a file.
 [**downloadFile**](FilesApi.md#downloadfile) | **GET** /files/{file_id}/content | Returns the contents of the specified file.
 [**listFiles**](FilesApi.md#listfiles) | **GET** /files | Returns a list of files.
@@ -24,15 +24,21 @@ Upload a file that can be used across various endpoints. Individual files can be
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFilesApi();
-final MultipartFile file = BINARY_DATA_HERE; // MultipartFile | The File object (not file name) to be uploaded. 
-final String purpose = purpose_example; // String | The intended purpose of the uploaded file. One of: - `assistants`: Used in the Assistants API - `batch`: Used in the Batch API - `fine-tune`: Used for fine-tuning - `vision`: Images used for vision fine-tuning - `user_data`: Flexible file type for any purpose - `evals`: Used for eval data sets 
+final api_instance = FilesApi();
+final file = BINARY_DATA_HERE; // MultipartFile | The File object (not file name) to be uploaded. 
+final purpose = purpose_example; // String | The intended purpose of the uploaded file. One of: - `assistants`: Used in the Assistants API - `batch`: Used in the Batch API - `fine-tune`: Used for fine-tuning - `vision`: Images used for vision fine-tuning - `user_data`: Flexible file type for any purpose - `evals`: Used for eval data sets 
 
 try {
-    final response = api.createFile(file, purpose);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createFile(file, purpose);
+    print(result);
+} catch (e) {
     print('Exception when calling FilesApi->createFile: $e\n');
 }
 ```
@@ -67,14 +73,20 @@ Delete a file.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFilesApi();
-final String fileId = fileId_example; // String | The ID of the file to use for this request.
+final api_instance = FilesApi();
+final fileId = fileId_example; // String | The ID of the file to use for this request.
 
 try {
-    final response = api.deleteFile(fileId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteFile(fileId);
+    print(result);
+} catch (e) {
     print('Exception when calling FilesApi->deleteFile: $e\n');
 }
 ```
@@ -108,14 +120,20 @@ Returns the contents of the specified file.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFilesApi();
-final String fileId = fileId_example; // String | The ID of the file to use for this request.
+final api_instance = FilesApi();
+final fileId = fileId_example; // String | The ID of the file to use for this request.
 
 try {
-    final response = api.downloadFile(fileId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.downloadFile(fileId);
+    print(result);
+} catch (e) {
     print('Exception when calling FilesApi->downloadFile: $e\n');
 }
 ```
@@ -149,17 +167,23 @@ Returns a list of files.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFilesApi();
-final String purpose = purpose_example; // String | Only return files with the given purpose.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 10,000, and the default is 10,000. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final api_instance = FilesApi();
+final purpose = purpose_example; // String | Only return files with the given purpose.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 10,000, and the default is 10,000. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
 
 try {
-    final response = api.listFiles(purpose, limit, order, after);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listFiles(purpose, limit, order, after);
+    print(result);
+} catch (e) {
     print('Exception when calling FilesApi->listFiles: $e\n');
 }
 ```
@@ -196,14 +220,20 @@ Returns information about a specific file.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getFilesApi();
-final String fileId = fileId_example; // String | The ID of the file to use for this request.
+final api_instance = FilesApi();
+final fileId = fileId_example; // String | The ID of the file to use for this request.
 
 try {
-    final response = api.retrieveFile(fileId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveFile(fileId);
+    print(result);
+} catch (e) {
     print('Exception when calling FilesApi->retrieveFile: $e\n');
 }
 ```

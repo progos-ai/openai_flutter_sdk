@@ -16,12 +16,12 @@ Name | Type | Description | Notes
 **itemId** | **String** | The ID of the item. | 
 **contentIndex** | **int** | The index of the content part in the item's content array. | 
 **transcript** | **String** | The final transcript of the audio. | 
-**logprobs** | [**BuiltList&lt;LogProbProperties&gt;**](LogProbProperties.md) | The log probabilities of the transcription. | [optional] 
+**logprobs** | [**List<LogProbProperties>**](LogProbProperties.md) | The log probabilities of the transcription. | [optional] [default to const []]
 **delta** | **String** | The text delta. | 
 **error** | [**RealtimeServerEventErrorError**](RealtimeServerEventErrorError.md) |  | 
 **audioEndMs** | **int** | Milliseconds since the session started when speech stopped. This will  correspond to the end of audio sent to the model, and thus includes the  `min_silence_duration_ms` configured in the Session.  | 
 **audioStartMs** | **int** | Milliseconds from the start of all audio written to the buffer during the  session when speech was first detected. This will correspond to the  beginning of audio sent to the model, and thus includes the  `prefix_padding_ms` configured in the Session.  | 
-**rateLimits** | [**BuiltList&lt;RealtimeServerEventRateLimitsUpdatedRateLimitsInner&gt;**](RealtimeServerEventRateLimitsUpdatedRateLimitsInner.md) | List of rate limit information. | 
+**rateLimits** | [**List<RealtimeServerEventRateLimitsUpdatedRateLimitsInner>**](RealtimeServerEventRateLimitsUpdatedRateLimitsInner.md) | List of rate limit information. | [default to const []]
 **responseId** | **String** | The unique ID of the response that produced the audio. | 
 **outputIndex** | **int** | The index of the output item in the response. | 
 **part_** | [**RealtimeServerEventResponseContentPartDonePart**](RealtimeServerEventResponseContentPartDonePart.md) |  | 

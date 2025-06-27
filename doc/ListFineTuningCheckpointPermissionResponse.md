@@ -8,7 +8,7 @@ import 'package:openai_flutter_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BuiltList&lt;FineTuningCheckpointPermission&gt;**](FineTuningCheckpointPermission.md) |  | 
+**data** | [**List<FineTuningCheckpointPermission>**](FineTuningCheckpointPermission.md) |  | [default to const []]
 **object** | **String** |  | 
 **firstId** | **String** |  | [optional] 
 **lastId** | **String** |  | [optional] 

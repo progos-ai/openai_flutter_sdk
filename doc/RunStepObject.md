@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **cancelledAt** | **int** | The Unix timestamp (in seconds) for when the run step was cancelled. | 
 **failedAt** | **int** | The Unix timestamp (in seconds) for when the run step failed. | 
 **completedAt** | **int** | The Unix timestamp (in seconds) for when the run step completed. | 
-**metadata** | **BuiltMap&lt;String, String&gt;** | Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.  | 
+**metadata** | **Map<String, String>** | Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.  | [default to const {}]
 **usage** | [**RunStepCompletionUsage**](RunStepCompletionUsage.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

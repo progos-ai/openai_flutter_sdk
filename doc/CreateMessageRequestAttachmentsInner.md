@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fileId** | **String** | The ID of the file to attach to the message. | [optional] 
-**tools** | [**BuiltList&lt;CreateMessageRequestAttachmentsInnerToolsInner&gt;**](CreateMessageRequestAttachmentsInnerToolsInner.md) | The tools to add this file to. | [optional] 
+**tools** | [**List<CreateMessageRequestAttachmentsInnerToolsInner>**](CreateMessageRequestAttachmentsInnerToolsInner.md) | The tools to add this file to. | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,7 +9,7 @@ All URIs are relative to *https://api.openai.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelRun**](AssistantsApi.md#cancelrun) | **POST** /threads/{thread_id}/runs/{run_id}/cancel | Cancels a run that is &#x60;in_progress&#x60;.
+[**cancelRun**](AssistantsApi.md#cancelrun) | **POST** /threads/{thread_id}/runs/{run_id}/cancel | Cancels a run that is `in_progress`.
 [**createAssistant**](AssistantsApi.md#createassistant) | **POST** /assistants | Create an assistant with a model and instructions.
 [**createMessage**](AssistantsApi.md#createmessage) | **POST** /threads/{thread_id}/messages | Create a message.
 [**createRun**](AssistantsApi.md#createrun) | **POST** /threads/{thread_id}/runs | Create a run.
@@ -31,7 +31,7 @@ Method | HTTP request | Description
 [**modifyMessage**](AssistantsApi.md#modifymessage) | **POST** /threads/{thread_id}/messages/{message_id} | Modifies a message.
 [**modifyRun**](AssistantsApi.md#modifyrun) | **POST** /threads/{thread_id}/runs/{run_id} | Modifies a run.
 [**modifyThread**](AssistantsApi.md#modifythread) | **POST** /threads/{thread_id} | Modifies a thread.
-[**submitToolOuputsToRun**](AssistantsApi.md#submittoolouputstorun) | **POST** /threads/{thread_id}/runs/{run_id}/submit_tool_outputs | When a run has the &#x60;status: \&quot;requires_action\&quot;&#x60; and &#x60;required_action.type&#x60; is &#x60;submit_tool_outputs&#x60;, this endpoint can be used to submit the outputs from the tool calls once they&#39;re all completed. All outputs must be submitted in a single request. 
+[**submitToolOuputsToRun**](AssistantsApi.md#submittoolouputstorun) | **POST** /threads/{thread_id}/runs/{run_id}/submit_tool_outputs | When a run has the `status: \"requires_action\"` and `required_action.type` is `submit_tool_outputs`, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request. 
 
 
 # **cancelRun**
@@ -42,15 +42,21 @@ Cancels a run that is `in_progress`.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to which this run belongs.
-final String runId = runId_example; // String | The ID of the run to cancel.
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to which this run belongs.
+final runId = runId_example; // String | The ID of the run to cancel.
 
 try {
-    final response = api.cancelRun(threadId, runId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.cancelRun(threadId, runId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->cancelRun: $e\n');
 }
 ```
@@ -85,14 +91,20 @@ Create an assistant with a model and instructions.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final CreateAssistantRequest createAssistantRequest = ; // CreateAssistantRequest | 
+final api_instance = AssistantsApi();
+final createAssistantRequest = CreateAssistantRequest(); // CreateAssistantRequest | 
 
 try {
-    final response = api.createAssistant(createAssistantRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createAssistant(createAssistantRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->createAssistant: $e\n');
 }
 ```
@@ -126,15 +138,21 @@ Create a message.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) to create a message for.
-final CreateMessageRequest createMessageRequest = ; // CreateMessageRequest | 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) to create a message for.
+final createMessageRequest = CreateMessageRequest(); // CreateMessageRequest | 
 
 try {
-    final response = api.createMessage(threadId, createMessageRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createMessage(threadId, createMessageRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->createMessage: $e\n');
 }
 ```
@@ -169,16 +187,22 @@ Create a run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to run.
-final CreateRunRequest createRunRequest = ; // CreateRunRequest | 
-final BuiltList<String> includeLeftSquareBracketRightSquareBracket = ; // BuiltList<String> | A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information. 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to run.
+final createRunRequest = CreateRunRequest(); // CreateRunRequest | 
+final includeLeftSquareBracketRightSquareBracket = []; // List<String> | A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information. 
 
 try {
-    final response = api.createRun(threadId, createRunRequest, includeLeftSquareBracketRightSquareBracket);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createRun(threadId, createRunRequest, includeLeftSquareBracketRightSquareBracket);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->createRun: $e\n');
 }
 ```
@@ -189,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **threadId** | **String**| The ID of the thread to run. | 
  **createRunRequest** | [**CreateRunRequest**](CreateRunRequest.md)|  | 
- **includeLeftSquareBracketRightSquareBracket** | [**BuiltList&lt;String&gt;**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information.  | [optional] 
+ **includeLeftSquareBracketRightSquareBracket** | [**List<String>**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information.  | [optional] [default to const []]
 
 ### Return type
 
@@ -214,14 +238,20 @@ Create a thread.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final CreateThreadRequest createThreadRequest = ; // CreateThreadRequest | 
+final api_instance = AssistantsApi();
+final createThreadRequest = CreateThreadRequest(); // CreateThreadRequest | 
 
 try {
-    final response = api.createThread(createThreadRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createThread(createThreadRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->createThread: $e\n');
 }
 ```
@@ -255,14 +285,20 @@ Create a thread and run it in one request.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final CreateThreadAndRunRequest createThreadAndRunRequest = ; // CreateThreadAndRunRequest | 
+final api_instance = AssistantsApi();
+final createThreadAndRunRequest = CreateThreadAndRunRequest(); // CreateThreadAndRunRequest | 
 
 try {
-    final response = api.createThreadAndRun(createThreadAndRunRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createThreadAndRun(createThreadAndRunRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->createThreadAndRun: $e\n');
 }
 ```
@@ -296,14 +332,20 @@ Delete an assistant.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String assistantId = assistantId_example; // String | The ID of the assistant to delete.
+final api_instance = AssistantsApi();
+final assistantId = assistantId_example; // String | The ID of the assistant to delete.
 
 try {
-    final response = api.deleteAssistant(assistantId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteAssistant(assistantId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->deleteAssistant: $e\n');
 }
 ```
@@ -337,15 +379,21 @@ Deletes a message.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to which this message belongs.
-final String messageId = messageId_example; // String | The ID of the message to delete.
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to which this message belongs.
+final messageId = messageId_example; // String | The ID of the message to delete.
 
 try {
-    final response = api.deleteMessage(threadId, messageId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteMessage(threadId, messageId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->deleteMessage: $e\n');
 }
 ```
@@ -380,14 +428,20 @@ Delete a thread.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to delete.
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to delete.
 
 try {
-    final response = api.deleteThread(threadId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteThread(threadId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->deleteThread: $e\n');
 }
 ```
@@ -421,14 +475,20 @@ Retrieves an assistant.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String assistantId = assistantId_example; // String | The ID of the assistant to retrieve.
+final api_instance = AssistantsApi();
+final assistantId = assistantId_example; // String | The ID of the assistant to retrieve.
 
 try {
-    final response = api.getAssistant(assistantId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getAssistant(assistantId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->getAssistant: $e\n');
 }
 ```
@@ -462,15 +522,21 @@ Retrieve a message.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) to which this message belongs.
-final String messageId = messageId_example; // String | The ID of the message to retrieve.
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) to which this message belongs.
+final messageId = messageId_example; // String | The ID of the message to retrieve.
 
 try {
-    final response = api.getMessage(threadId, messageId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getMessage(threadId, messageId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->getMessage: $e\n');
 }
 ```
@@ -505,15 +571,21 @@ Retrieves a run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
-final String runId = runId_example; // String | The ID of the run to retrieve.
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
+final runId = runId_example; // String | The ID of the run to retrieve.
 
 try {
-    final response = api.getRun(threadId, runId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getRun(threadId, runId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->getRun: $e\n');
 }
 ```
@@ -548,17 +620,23 @@ Retrieves a run step.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to which the run and run step belongs.
-final String runId = runId_example; // String | The ID of the run to which the run step belongs.
-final String stepId = stepId_example; // String | The ID of the run step to retrieve.
-final BuiltList<String> includeLeftSquareBracketRightSquareBracket = ; // BuiltList<String> | A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information. 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to which the run and run step belongs.
+final runId = runId_example; // String | The ID of the run to which the run step belongs.
+final stepId = stepId_example; // String | The ID of the run step to retrieve.
+final includeLeftSquareBracketRightSquareBracket = []; // List<String> | A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information. 
 
 try {
-    final response = api.getRunStep(threadId, runId, stepId, includeLeftSquareBracketRightSquareBracket);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getRunStep(threadId, runId, stepId, includeLeftSquareBracketRightSquareBracket);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->getRunStep: $e\n');
 }
 ```
@@ -570,7 +648,7 @@ Name | Type | Description  | Notes
  **threadId** | **String**| The ID of the thread to which the run and run step belongs. | 
  **runId** | **String**| The ID of the run to which the run step belongs. | 
  **stepId** | **String**| The ID of the run step to retrieve. | 
- **includeLeftSquareBracketRightSquareBracket** | [**BuiltList&lt;String&gt;**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information.  | [optional] 
+ **includeLeftSquareBracketRightSquareBracket** | [**List<String>**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information.  | [optional] [default to const []]
 
 ### Return type
 
@@ -595,14 +673,20 @@ Retrieves a thread.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to retrieve.
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to retrieve.
 
 try {
-    final response = api.getThread(threadId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getThread(threadId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->getThread: $e\n');
 }
 ```
@@ -636,17 +720,23 @@ Returns a list of assistants.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final api_instance = AssistantsApi();
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
 
 try {
-    final response = api.listAssistants(limit, order, after, before);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listAssistants(limit, order, after, before);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->listAssistants: $e\n');
 }
 ```
@@ -683,19 +773,25 @@ Returns a list of messages for a given thread.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) the messages belong to.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-final String runId = runId_example; // String | Filter messages by the run ID that generated them. 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) the messages belong to.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final runId = runId_example; // String | Filter messages by the run ID that generated them. 
 
 try {
-    final response = api.listMessages(threadId, limit, order, after, before, runId);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listMessages(threadId, limit, order, after, before, runId);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->listMessages: $e\n');
 }
 ```
@@ -734,20 +830,26 @@ Returns a list of run steps belonging to a run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread the run and run steps belong to.
-final String runId = runId_example; // String | The ID of the run the run steps belong to.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
-final BuiltList<String> includeLeftSquareBracketRightSquareBracket = ; // BuiltList<String> | A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information. 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread the run and run steps belong to.
+final runId = runId_example; // String | The ID of the run the run steps belong to.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final includeLeftSquareBracketRightSquareBracket = []; // List<String> | A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information. 
 
 try {
-    final response = api.listRunSteps(threadId, runId, limit, order, after, before, includeLeftSquareBracketRightSquareBracket);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listRunSteps(threadId, runId, limit, order, after, before, includeLeftSquareBracketRightSquareBracket);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->listRunSteps: $e\n');
 }
 ```
@@ -762,7 +864,7 @@ Name | Type | Description  | Notes
  **order** | **String**| Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order.  | [optional] [default to 'desc']
  **after** | **String**| A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list.  | [optional] 
  **before** | **String**| A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list.  | [optional] 
- **includeLeftSquareBracketRightSquareBracket** | [**BuiltList&lt;String&gt;**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information.  | [optional] 
+ **includeLeftSquareBracketRightSquareBracket** | [**List<String>**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `step_details.tool_calls[*].file_search.results[*].content` to fetch the file search result content.  See the [file search tool documentation](/docs/assistants/tools/file-search#customizing-file-search-settings) for more information.  | [optional] [default to const []]
 
 ### Return type
 
@@ -787,18 +889,24 @@ Returns a list of runs belonging to a thread.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread the run belongs to.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread the run belongs to.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final before = before_example; // String | A cursor for use in pagination. `before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list. 
 
 try {
-    final response = api.listRuns(threadId, limit, order, after, before);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listRuns(threadId, limit, order, after, before);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->listRuns: $e\n');
 }
 ```
@@ -836,15 +944,21 @@ Modifies an assistant.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String assistantId = assistantId_example; // String | The ID of the assistant to modify.
-final ModifyAssistantRequest modifyAssistantRequest = ; // ModifyAssistantRequest | 
+final api_instance = AssistantsApi();
+final assistantId = assistantId_example; // String | The ID of the assistant to modify.
+final modifyAssistantRequest = ModifyAssistantRequest(); // ModifyAssistantRequest | 
 
 try {
-    final response = api.modifyAssistant(assistantId, modifyAssistantRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyAssistant(assistantId, modifyAssistantRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->modifyAssistant: $e\n');
 }
 ```
@@ -879,16 +993,22 @@ Modifies a message.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to which this message belongs.
-final String messageId = messageId_example; // String | The ID of the message to modify.
-final ModifyMessageRequest modifyMessageRequest = ; // ModifyMessageRequest | 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to which this message belongs.
+final messageId = messageId_example; // String | The ID of the message to modify.
+final modifyMessageRequest = ModifyMessageRequest(); // ModifyMessageRequest | 
 
 try {
-    final response = api.modifyMessage(threadId, messageId, modifyMessageRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyMessage(threadId, messageId, modifyMessageRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->modifyMessage: $e\n');
 }
 ```
@@ -924,16 +1044,22 @@ Modifies a run.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
-final String runId = runId_example; // String | The ID of the run to modify.
-final ModifyRunRequest modifyRunRequest = ; // ModifyRunRequest | 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) that was run.
+final runId = runId_example; // String | The ID of the run to modify.
+final modifyRunRequest = ModifyRunRequest(); // ModifyRunRequest | 
 
 try {
-    final response = api.modifyRun(threadId, runId, modifyRunRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyRun(threadId, runId, modifyRunRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->modifyRun: $e\n');
 }
 ```
@@ -969,15 +1095,21 @@ Modifies a thread.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the thread to modify. Only the `metadata` can be modified.
-final ModifyThreadRequest modifyThreadRequest = ; // ModifyThreadRequest | 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the thread to modify. Only the `metadata` can be modified.
+final modifyThreadRequest = ModifyThreadRequest(); // ModifyThreadRequest | 
 
 try {
-    final response = api.modifyThread(threadId, modifyThreadRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyThread(threadId, modifyThreadRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->modifyThread: $e\n');
 }
 ```
@@ -1012,16 +1144,22 @@ When a run has the `status: \"requires_action\"` and `required_action.type` is `
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getAssistantsApi();
-final String threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) to which this run belongs.
-final String runId = runId_example; // String | The ID of the run that requires the tool output submission.
-final SubmitToolOutputsRunRequest submitToolOutputsRunRequest = ; // SubmitToolOutputsRunRequest | 
+final api_instance = AssistantsApi();
+final threadId = threadId_example; // String | The ID of the [thread](/docs/api-reference/threads) to which this run belongs.
+final runId = runId_example; // String | The ID of the run that requires the tool output submission.
+final submitToolOutputsRunRequest = SubmitToolOutputsRunRequest(); // SubmitToolOutputsRunRequest | 
 
 try {
-    final response = api.submitToolOuputsToRun(threadId, runId, submitToolOutputsRunRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.submitToolOuputsToRun(threadId, runId, submitToolOutputsRunRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling AssistantsApi->submitToolOuputsToRun: $e\n');
 }
 ```

@@ -9,8 +9,8 @@ All URIs are relative to *https://api.openai.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createRealtimeSession**](RealtimeApi.md#createrealtimesession) | **POST** /realtime/sessions | Create an ephemeral API token for use in client-side applications with the Realtime API. Can be configured with the same session parameters as the &#x60;session.update&#x60; client event.  It responds with a session object, plus a &#x60;client_secret&#x60; key which contains a usable ephemeral API token that can be used to authenticate browser clients for the Realtime API. 
-[**createRealtimeTranscriptionSession**](RealtimeApi.md#createrealtimetranscriptionsession) | **POST** /realtime/transcription_sessions | Create an ephemeral API token for use in client-side applications with the Realtime API specifically for realtime transcriptions.  Can be configured with the same session parameters as the &#x60;transcription_session.update&#x60; client event.  It responds with a session object, plus a &#x60;client_secret&#x60; key which contains a usable ephemeral API token that can be used to authenticate browser clients for the Realtime API. 
+[**createRealtimeSession**](RealtimeApi.md#createrealtimesession) | **POST** /realtime/sessions | Create an ephemeral API token for use in client-side applications with the Realtime API. Can be configured with the same session parameters as the `session.update` client event.  It responds with a session object, plus a `client_secret` key which contains a usable ephemeral API token that can be used to authenticate browser clients for the Realtime API. 
+[**createRealtimeTranscriptionSession**](RealtimeApi.md#createrealtimetranscriptionsession) | **POST** /realtime/transcription_sessions | Create an ephemeral API token for use in client-side applications with the Realtime API specifically for realtime transcriptions.  Can be configured with the same session parameters as the `transcription_session.update` client event.  It responds with a session object, plus a `client_secret` key which contains a usable ephemeral API token that can be used to authenticate browser clients for the Realtime API. 
 
 
 # **createRealtimeSession**
@@ -21,14 +21,20 @@ Create an ephemeral API token for use in client-side applications with the Realt
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getRealtimeApi();
-final RealtimeSessionCreateRequest realtimeSessionCreateRequest = ; // RealtimeSessionCreateRequest | Create an ephemeral API key with the given session configuration.
+final api_instance = RealtimeApi();
+final realtimeSessionCreateRequest = RealtimeSessionCreateRequest(); // RealtimeSessionCreateRequest | Create an ephemeral API key with the given session configuration.
 
 try {
-    final response = api.createRealtimeSession(realtimeSessionCreateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createRealtimeSession(realtimeSessionCreateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling RealtimeApi->createRealtimeSession: $e\n');
 }
 ```
@@ -62,14 +68,20 @@ Create an ephemeral API token for use in client-side applications with the Realt
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getRealtimeApi();
-final RealtimeTranscriptionSessionCreateRequest realtimeTranscriptionSessionCreateRequest = ; // RealtimeTranscriptionSessionCreateRequest | Create an ephemeral API key with the given session configuration.
+final api_instance = RealtimeApi();
+final realtimeTranscriptionSessionCreateRequest = RealtimeTranscriptionSessionCreateRequest(); // RealtimeTranscriptionSessionCreateRequest | Create an ephemeral API key with the given session configuration.
 
 try {
-    final response = api.createRealtimeTranscriptionSession(realtimeTranscriptionSessionCreateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createRealtimeTranscriptionSession(realtimeTranscriptionSessionCreateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling RealtimeApi->createRealtimeTranscriptionSession: $e\n');
 }
 ```

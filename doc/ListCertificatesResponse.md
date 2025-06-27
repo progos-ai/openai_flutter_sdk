@@ -8,7 +8,7 @@ import 'package:openai_flutter_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BuiltList&lt;Certificate&gt;**](Certificate.md) |  | 
+**data** | [**List<Certificate>**](Certificate.md) |  | [default to const []]
 **firstId** | **String** |  | [optional] 
 **lastId** | **String** |  | [optional] 
 **hasMore** | **bool** |  | 

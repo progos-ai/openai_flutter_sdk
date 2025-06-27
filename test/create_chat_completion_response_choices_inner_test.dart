@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateChatCompletionResponseChoicesInner
 void main() {
-  final instance = CreateChatCompletionResponseChoicesInnerBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateChatCompletionResponseChoicesInner();
 
-  group(CreateChatCompletionResponseChoicesInner, () {
+  group('test CreateChatCompletionResponseChoicesInner', () {
     // The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, `tool_calls` if the model called a tool, or `function_call` (deprecated) if the model called a function. 
     // String finishReason
     test('to test the property `finishReason`', () async {
@@ -29,5 +38,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

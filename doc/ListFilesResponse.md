@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** |  | 
-**data** | [**BuiltList&lt;OpenAIFile&gt;**](OpenAIFile.md) |  | 
+**data** | [**List<OpenAIFile>**](OpenAIFile.md) |  | [default to const []]
 **firstId** | **String** |  | 
 **lastId** | **String** |  | 
 **hasMore** | **bool** |  | 

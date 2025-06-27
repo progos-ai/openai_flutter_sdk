@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The type of this object. It is always set to \"list\".  | [default to 'list']
-**data** | [**BuiltList&lt;EvalRun&gt;**](EvalRun.md) | An array of eval run objects.  | 
+**data** | [**List<EvalRun>**](EvalRun.md) | An array of eval run objects.  | [default to const []]
 **firstId** | **String** | The identifier of the first eval run in the data array. | 
 **lastId** | **String** | The identifier of the last eval run in the data array. | 
 **hasMore** | **bool** | Indicates whether there are more evals available. | 

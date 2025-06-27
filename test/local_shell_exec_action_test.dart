@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for LocalShellExecAction
 void main() {
-  final instance = LocalShellExecActionBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = LocalShellExecAction();
 
-  group(LocalShellExecAction, () {
+  group('test LocalShellExecAction', () {
     // The type of the local shell action. Always `exec`. 
     // String type
     test('to test the property `type`', () async {
@@ -14,7 +23,7 @@ void main() {
     });
 
     // The command to run. 
-    // BuiltList<String> command
+    // List<String> command (default value: const [])
     test('to test the property `command`', () async {
       // TODO
     });
@@ -32,7 +41,7 @@ void main() {
     });
 
     // Environment variables to set for the command. 
-    // BuiltMap<String, String> env
+    // Map<String, String> env (default value: const {})
     test('to test the property `env`', () async {
       // TODO
     });
@@ -43,5 +52,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

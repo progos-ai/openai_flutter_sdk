@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateTranslation200Response
 void main() {
-  final instance = CreateTranslation200ResponseBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateTranslation200Response();
 
-  group(CreateTranslation200Response, () {
+  group('test CreateTranslation200Response', () {
     // The translated text.
     // String text
     test('to test the property `text`', () async {
@@ -26,10 +35,12 @@ void main() {
     });
 
     // Segments of the translated text and their corresponding details.
-    // BuiltList<TranscriptionSegment> segments
+    // List<TranscriptionSegment> segments (default value: const [])
     test('to test the property `segments`', () async {
       // TODO
     });
 
+
   });
+
 }

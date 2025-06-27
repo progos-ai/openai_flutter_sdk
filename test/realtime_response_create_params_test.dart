@@ -1,14 +1,23 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for RealtimeResponseCreateParams
 void main() {
-  final instance = RealtimeResponseCreateParamsBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = RealtimeResponseCreateParams();
 
-  group(RealtimeResponseCreateParams, () {
+  group('test RealtimeResponseCreateParams', () {
     // The set of modalities the model can respond with. To disable audio, set this to [\"text\"]. 
-    // BuiltList<String> modalities
+    // List<String> modalities (default value: const [])
     test('to test the property `modalities`', () async {
       // TODO
     });
@@ -32,7 +41,7 @@ void main() {
     });
 
     // Tools (functions) available to the model.
-    // BuiltList<RealtimeResponseCreateParamsToolsInner> tools
+    // List<RealtimeResponseCreateParamsToolsInner> tools (default value: const [])
     test('to test the property `tools`', () async {
       // TODO
     });
@@ -60,16 +69,18 @@ void main() {
     });
 
     // Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.   Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters. 
-    // BuiltMap<String, String> metadata
+    // Map<String, String> metadata (default value: const {})
     test('to test the property `metadata`', () async {
       // TODO
     });
 
     // Input items to include in the prompt for the model. Using this field creates a new context for this Response instead of using the default conversation. An empty array `[]` will clear the context for this Response. Note that this can include references to items from the default conversation. 
-    // BuiltList<RealtimeConversationItemWithReference> input
+    // List<RealtimeConversationItemWithReference> input (default value: const [])
     test('to test the property `input`', () async {
       // TODO
     });
 
+
   });
+
 }

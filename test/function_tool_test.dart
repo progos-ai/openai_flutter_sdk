@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for FunctionTool
 void main() {
-  final instance = FunctionToolBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = FunctionTool();
 
-  group(FunctionTool, () {
+  group('test FunctionTool', () {
     // The type of the function tool. Always `function`.
     // String type (default value: 'function')
     test('to test the property `type`', () async {
@@ -26,7 +35,7 @@ void main() {
     });
 
     // A JSON schema object describing the parameters of the function.
-    // BuiltMap<String, JsonObject> parameters
+    // Map<String, Object> parameters (default value: const {})
     test('to test the property `parameters`', () async {
       // TODO
     });
@@ -37,5 +46,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

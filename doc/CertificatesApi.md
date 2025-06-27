@@ -29,14 +29,20 @@ Activate certificates at the organization level.  You can atomically and idempot
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final ToggleCertificatesRequest toggleCertificatesRequest = ; // ToggleCertificatesRequest | The certificate activation payload.
+final api_instance = CertificatesApi();
+final toggleCertificatesRequest = ToggleCertificatesRequest(); // ToggleCertificatesRequest | The certificate activation payload.
 
 try {
-    final response = api.activateOrganizationCertificates(toggleCertificatesRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.activateOrganizationCertificates(toggleCertificatesRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->activateOrganizationCertificates: $e\n');
 }
 ```
@@ -70,15 +76,21 @@ Activate certificates at the project level.  You can atomically and idempotently
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final ToggleCertificatesRequest toggleCertificatesRequest = ; // ToggleCertificatesRequest | The certificate activation payload.
+final api_instance = CertificatesApi();
+final projectId = projectId_example; // String | The ID of the project.
+final toggleCertificatesRequest = ToggleCertificatesRequest(); // ToggleCertificatesRequest | The certificate activation payload.
 
 try {
-    final response = api.activateProjectCertificates(projectId, toggleCertificatesRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.activateProjectCertificates(projectId, toggleCertificatesRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->activateProjectCertificates: $e\n');
 }
 ```
@@ -113,14 +125,20 @@ Deactivate certificates at the organization level.  You can atomically and idemp
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final ToggleCertificatesRequest toggleCertificatesRequest = ; // ToggleCertificatesRequest | The certificate deactivation payload.
+final api_instance = CertificatesApi();
+final toggleCertificatesRequest = ToggleCertificatesRequest(); // ToggleCertificatesRequest | The certificate deactivation payload.
 
 try {
-    final response = api.deactivateOrganizationCertificates(toggleCertificatesRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deactivateOrganizationCertificates(toggleCertificatesRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->deactivateOrganizationCertificates: $e\n');
 }
 ```
@@ -154,15 +172,21 @@ Deactivate certificates at the project level. You can atomically and  idempotent
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final ToggleCertificatesRequest toggleCertificatesRequest = ; // ToggleCertificatesRequest | The certificate deactivation payload.
+final api_instance = CertificatesApi();
+final projectId = projectId_example; // String | The ID of the project.
+final toggleCertificatesRequest = ToggleCertificatesRequest(); // ToggleCertificatesRequest | The certificate deactivation payload.
 
 try {
-    final response = api.deactivateProjectCertificates(projectId, toggleCertificatesRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deactivateProjectCertificates(projectId, toggleCertificatesRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->deactivateProjectCertificates: $e\n');
 }
 ```
@@ -197,13 +221,19 @@ Delete a certificate from the organization.  The certificate must be inactive fo
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
+final api_instance = CertificatesApi();
 
 try {
-    final response = api.deleteCertificate();
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteCertificate();
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->deleteCertificate: $e\n');
 }
 ```
@@ -234,15 +264,21 @@ Get a certificate that has been uploaded to the organization.  You can get a cer
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final String certificateId = certificateId_example; // String | Unique ID of the certificate to retrieve.
-final BuiltList<String> include = ; // BuiltList<String> | A list of additional fields to include in the response. Currently the only supported value is `content` to fetch the PEM content of the certificate.
+final api_instance = CertificatesApi();
+final certificateId = certificateId_example; // String | Unique ID of the certificate to retrieve.
+final include = []; // List<String> | A list of additional fields to include in the response. Currently the only supported value is `content` to fetch the PEM content of the certificate.
 
 try {
-    final response = api.getCertificate(certificateId, include);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.getCertificate(certificateId, include);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->getCertificate: $e\n');
 }
 ```
@@ -252,7 +288,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **certificateId** | **String**| Unique ID of the certificate to retrieve. | 
- **include** | [**BuiltList&lt;String&gt;**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `content` to fetch the PEM content of the certificate. | [optional] 
+ **include** | [**List<String>**](String.md)| A list of additional fields to include in the response. Currently the only supported value is `content` to fetch the PEM content of the certificate. | [optional] [default to const []]
 
 ### Return type
 
@@ -277,16 +313,22 @@ List uploaded certificates for this organization.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final api_instance = CertificatesApi();
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
 
 try {
-    final response = api.listOrganizationCertificates(limit, after, order);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listOrganizationCertificates(limit, after, order);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->listOrganizationCertificates: $e\n');
 }
 ```
@@ -322,17 +364,23 @@ List certificates for this project.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final String projectId = projectId_example; // String | The ID of the project.
-final int limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
-final String after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
-final String order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
+final api_instance = CertificatesApi();
+final projectId = projectId_example; // String | The ID of the project.
+final limit = 56; // int | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20. 
+final after = after_example; // String | A cursor for use in pagination. `after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list. 
+final order = order_example; // String | Sort order by the `created_at` timestamp of the objects. `asc` for ascending order and `desc` for descending order. 
 
 try {
-    final response = api.listProjectCertificates(projectId, limit, after, order);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listProjectCertificates(projectId, limit, after, order);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->listProjectCertificates: $e\n');
 }
 ```
@@ -369,14 +417,20 @@ Modify a certificate. Note that only the name can be modified.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final ModifyCertificateRequest modifyCertificateRequest = ; // ModifyCertificateRequest | The certificate modification payload.
+final api_instance = CertificatesApi();
+final modifyCertificateRequest = ModifyCertificateRequest(); // ModifyCertificateRequest | The certificate modification payload.
 
 try {
-    final response = api.modifyCertificate(modifyCertificateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.modifyCertificate(modifyCertificateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->modifyCertificate: $e\n');
 }
 ```
@@ -410,14 +464,20 @@ Upload a certificate to the organization. This does **not** automatically activa
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCertificatesApi();
-final UploadCertificateRequest uploadCertificateRequest = ; // UploadCertificateRequest | The certificate upload payload.
+final api_instance = CertificatesApi();
+final uploadCertificateRequest = UploadCertificateRequest(); // UploadCertificateRequest | The certificate upload payload.
 
 try {
-    final response = api.uploadCertificate(uploadCertificateRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.uploadCertificate(uploadCertificateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CertificatesApi->uploadCertificate: $e\n');
 }
 ```

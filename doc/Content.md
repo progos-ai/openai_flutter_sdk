@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **detail** | **String** | The detail level of the image to be sent to the model. One of `high`, `low`, or `auto`. Defaults to `auto`. | 
 **filename** | **String** | The name of the file to be sent to the model. | [optional] 
 **fileData** | **String** | The content of the file to be sent to the model.  | [optional] 
-**annotations** | [**BuiltList&lt;Annotation&gt;**](Annotation.md) | The annotations of the text output. | 
-**logprobs** | [**BuiltList&lt;LogProb&gt;**](LogProb.md) |  | [optional] 
+**annotations** | [**List<Annotation>**](Annotation.md) | The annotations of the text output. | [default to const []]
+**logprobs** | [**List<LogProb>**](LogProb.md) |  | [optional] [default to const []]
 **refusal** | **String** | The refusal explanationfrom the model. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

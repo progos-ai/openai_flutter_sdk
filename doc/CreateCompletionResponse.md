@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | A unique identifier for the completion. | 
-**choices** | [**BuiltList&lt;CreateCompletionResponseChoicesInner&gt;**](CreateCompletionResponseChoicesInner.md) | The list of completion choices the model generated for the input prompt. | 
+**choices** | [**List<CreateCompletionResponseChoicesInner>**](CreateCompletionResponseChoicesInner.md) | The list of completion choices the model generated for the input prompt. | [default to const []]
 **created** | **int** | The Unix timestamp (in seconds) of when the completion was created. | 
 **model** | **String** | The model used for completion. | 
 **systemFingerprint** | **String** | This fingerprint represents the backend configuration that the model runs with.  Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.  | [optional] 

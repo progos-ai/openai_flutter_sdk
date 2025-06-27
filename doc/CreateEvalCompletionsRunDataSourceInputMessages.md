@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | The type of input messages. Always `template`. | 
-**template** | [**BuiltList&lt;TemplateInputMessagesTemplateInner&gt;**](TemplateInputMessagesTemplateInner.md) | A list of chat messages forming the prompt or context. May include variable references to the `item` namespace, ie {{item.name}}. | 
+**template** | [**List<TemplateInputMessagesTemplateInner>**](TemplateInputMessagesTemplateInner.md) | A list of chat messages forming the prompt or context. May include variable references to the `item` namespace, ie {{item.name}}. | [default to const []]
 **itemReference** | **String** | A reference to a variable in the `item` namespace. Ie, \"item.input_trajectory\" | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

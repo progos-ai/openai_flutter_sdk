@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** |  | 
-**data** | [**BuiltList&lt;UsageTimeBucket&gt;**](UsageTimeBucket.md) |  | 
+**data** | [**List<UsageTimeBucket>**](UsageTimeBucket.md) |  | [default to const []]
 **hasMore** | **bool** |  | 
 **nextPage** | **String** |  | 
 

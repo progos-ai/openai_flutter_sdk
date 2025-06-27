@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for RunStepDetailsToolCallsObject
 void main() {
-  final instance = RunStepDetailsToolCallsObjectBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = RunStepDetailsToolCallsObject();
 
-  group(RunStepDetailsToolCallsObject, () {
+  group('test RunStepDetailsToolCallsObject', () {
     // Always `tool_calls`.
     // String type
     test('to test the property `type`', () async {
@@ -14,10 +23,12 @@ void main() {
     });
 
     // An array of tool calls the run step was involved in. These can be associated with one of three types of tools: `code_interpreter`, `file_search`, or `function`. 
-    // BuiltList<RunStepDetailsToolCallsObjectToolCallsInner> toolCalls
+    // List<RunStepDetailsToolCallsObjectToolCallsInner> toolCalls (default value: const [])
     test('to test the property `toolCalls`', () async {
       // TODO
     });
 
+
   });
+
 }

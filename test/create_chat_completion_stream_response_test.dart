@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateChatCompletionStreamResponse
 void main() {
-  final instance = CreateChatCompletionStreamResponseBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateChatCompletionStreamResponse();
 
-  group(CreateChatCompletionStreamResponse, () {
+  group('test CreateChatCompletionStreamResponse', () {
     // A unique identifier for the chat completion. Each chunk has the same ID.
     // String id
     test('to test the property `id`', () async {
@@ -14,7 +23,7 @@ void main() {
     });
 
     // A list of chat completion choices. Can contain more than one elements if `n` is greater than 1. Can also be empty for the last chunk if you set `stream_options: {\"include_usage\": true}`. 
-    // BuiltList<CreateChatCompletionStreamResponseChoicesInner> choices
+    // List<CreateChatCompletionStreamResponseChoicesInner> choices (default value: const [])
     test('to test the property `choices`', () async {
       // TODO
     });
@@ -54,5 +63,7 @@ void main() {
       // TODO
     });
 
+
   });
+
 }

@@ -22,14 +22,20 @@ Delete a fine-tuned model. You must have the Owner role in your organization to 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getModelsApi();
-final String model = ft:gpt-4o-mini:acemeco:suffix:abc123; // String | The model to delete
+final api_instance = ModelsApi();
+final model = ft:gpt-4o-mini:acemeco:suffix:abc123; // String | The model to delete
 
 try {
-    final response = api.deleteModel(model);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.deleteModel(model);
+    print(result);
+} catch (e) {
     print('Exception when calling ModelsApi->deleteModel: $e\n');
 }
 ```
@@ -63,13 +69,19 @@ Lists the currently available models, and provides basic information about each 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getModelsApi();
+final api_instance = ModelsApi();
 
 try {
-    final response = api.listModels();
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.listModels();
+    print(result);
+} catch (e) {
     print('Exception when calling ModelsApi->listModels: $e\n');
 }
 ```
@@ -100,14 +112,20 @@ Retrieves a model instance, providing basic information about the model such as 
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getModelsApi();
-final String model = gpt-4o-mini; // String | The ID of the model to use for this request
+final api_instance = ModelsApi();
+final model = gpt-4o-mini; // String | The ID of the model to use for this request
 
 try {
-    final response = api.retrieveModel(model);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.retrieveModel(model);
+    print(result);
+} catch (e) {
     print('Exception when calling ModelsApi->retrieveModel: $e\n');
 }
 ```

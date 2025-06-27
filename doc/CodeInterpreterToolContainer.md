@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | Always `auto`. | 
-**fileIds** | **BuiltList&lt;String&gt;** | An optional list of uploaded files to make available to your code.  | [optional] 
+**fileIds** | **List<String>** | An optional list of uploaded files to make available to your code.  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

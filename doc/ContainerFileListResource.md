@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The type of object returned, must be 'list'. | 
-**data** | [**BuiltList&lt;ContainerFileResource&gt;**](ContainerFileResource.md) | A list of container files. | 
+**data** | [**List<ContainerFileResource>**](ContainerFileResource.md) | A list of container files. | [default to const []]
 **firstId** | **String** | The ID of the first file in the list. | 
 **lastId** | **String** | The ID of the last file in the list. | 
 **hasMore** | **bool** | Whether there are more files available. | 

@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | The name of the tool.  | 
 **description** | **String** | The description of the tool.  | [optional] 
-**inputSchema** | [**JsonObject**](.md) | The JSON schema describing the tool's input.  | 
-**annotations** | [**JsonObject**](.md) | Additional annotations about the tool.  | [optional] 
+**inputSchema** | [**Object**](.md) | The JSON schema describing the tool's input.  | 
+**annotations** | [**Object**](.md) | Additional annotations about the tool.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,7 +8,7 @@ import 'package:openai_flutter_sdk/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BuiltList&lt;Batch&gt;**](Batch.md) |  | 
+**data** | [**List<Batch>**](Batch.md) |  | [default to const []]
 **firstId** | **String** |  | [optional] 
 **lastId** | **String** |  | [optional] 
 **hasMore** | **bool** |  | 

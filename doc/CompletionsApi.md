@@ -20,14 +20,20 @@ Creates a completion for the provided prompt and parameters.
 ### Example
 ```dart
 import 'package:openai_flutter_sdk/api.dart';
+// TODO Configure HTTP Bearer authorization: ApiKeyAuth
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('ApiKeyAuth').setAccessToken(yourTokenGeneratorFunction);
 
-final api = OpenaiFlutterSdk().getCompletionsApi();
-final CreateCompletionRequest createCompletionRequest = ; // CreateCompletionRequest | 
+final api_instance = CompletionsApi();
+final createCompletionRequest = CreateCompletionRequest(); // CreateCompletionRequest | 
 
 try {
-    final response = api.createCompletion(createCompletionRequest);
-    print(response);
-} catch on DioException (e) {
+    final result = api_instance.createCompletion(createCompletionRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CompletionsApi->createCompletion: $e\n');
 }
 ```

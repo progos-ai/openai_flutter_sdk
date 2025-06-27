@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **object** | **String** |  | 
 **startTime** | **int** |  | 
 **endTime** | **int** |  | 
-**result** | [**BuiltList&lt;UsageTimeBucketResultInner&gt;**](UsageTimeBucketResultInner.md) |  | 
+**result** | [**List<UsageTimeBucketResultInner>**](UsageTimeBucketResultInner.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -2,7 +2,7 @@
 
 openapi-generator generate \
   -i https://app.stainless.com/api/spec/documented/openai/openapi.documented.yml \
-  -g dart-dio \
+  -g dart \
   -o . \
   --skip-validate-spec \
   --additional-properties=pubName=openai_flutter_sdk,serializableModel=true

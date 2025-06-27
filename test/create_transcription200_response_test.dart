@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for CreateTranscription200Response
 void main() {
-  final instance = CreateTranscription200ResponseBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = CreateTranscription200Response();
 
-  group(CreateTranscription200Response, () {
+  group('test CreateTranscription200Response', () {
     // The transcribed text.
     // String text
     test('to test the property `text`', () async {
@@ -14,7 +23,7 @@ void main() {
     });
 
     // The log probabilities of the tokens in the transcription. Only returned with the models `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` if `logprobs` is added to the `include` array. 
-    // BuiltList<CreateTranscriptionResponseJsonLogprobsInner> logprobs
+    // List<CreateTranscriptionResponseJsonLogprobsInner> logprobs (default value: const [])
     test('to test the property `logprobs`', () async {
       // TODO
     });
@@ -37,16 +46,18 @@ void main() {
     });
 
     // Extracted words and their corresponding timestamps.
-    // BuiltList<TranscriptionWord> words
+    // List<TranscriptionWord> words (default value: const [])
     test('to test the property `words`', () async {
       // TODO
     });
 
     // Segments of the transcribed text and their corresponding details.
-    // BuiltList<TranscriptionSegment> segments
+    // List<TranscriptionSegment> segments (default value: const [])
     test('to test the property `segments`', () async {
       // TODO
     });
 
+
   });
+
 }

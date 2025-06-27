@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openai_flutter_sdk/api.dart';
 import 'package:test/test.dart';
-import 'package:openai_flutter_sdk/openai_flutter_sdk.dart';
 
 // tests for TranscriptTextDeltaEvent
 void main() {
-  final instance = TranscriptTextDeltaEventBuilder();
-  // TODO add properties to the builder and call build()
+  // final instance = TranscriptTextDeltaEvent();
 
-  group(TranscriptTextDeltaEvent, () {
+  group('test TranscriptTextDeltaEvent', () {
     // The type of the event. Always `transcript.text.delta`. 
     // String type
     test('to test the property `type`', () async {
@@ -20,10 +29,12 @@ void main() {
     });
 
     // The log probabilities of the delta. Only included if you [create a transcription](/docs/api-reference/audio/create-transcription) with the `include[]` parameter set to `logprobs`. 
-    // BuiltList<TranscriptTextDeltaEventLogprobsInner> logprobs
+    // List<TranscriptTextDeltaEventLogprobsInner> logprobs (default value: const [])
     test('to test the property `logprobs`', () async {
       // TODO
     });
 
+
   });
+
 }

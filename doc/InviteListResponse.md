@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The object type, which is always `list` | 
-**data** | [**BuiltList&lt;Invite&gt;**](Invite.md) |  | 
+**data** | [**List<Invite>**](Invite.md) |  | [default to const []]
 **firstId** | **String** | The first `invite_id` in the retrieved `list` | [optional] 
 **lastId** | **String** | The last `invite_id` in the retrieved `list` | [optional] 
 **hasMore** | **bool** | The `has_more` property is used for pagination to indicate there are additional results. | [optional] 

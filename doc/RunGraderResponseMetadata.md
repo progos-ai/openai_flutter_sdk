@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | 
 **errors** | [**RunGraderResponseMetadataErrors**](RunGraderResponseMetadataErrors.md) |  | 
 **executionTime** | **num** |  | 
-**scores** | [**BuiltMap&lt;String, JsonObject&gt;**](JsonObject.md) |  | 
+**scores** | [**Map<String, Object>**](Object.md) |  | [default to const {}]
 **tokenUsage** | **int** |  | 
 **sampledModelName** | **String** |  | 
 

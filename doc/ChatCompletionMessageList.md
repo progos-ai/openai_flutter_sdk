@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **object** | **String** | The type of this object. It is always set to \"list\".  | [default to 'list']
-**data** | [**BuiltList&lt;ChatCompletionMessageListDataInner&gt;**](ChatCompletionMessageListDataInner.md) | An array of chat completion message objects.  | 
+**data** | [**List<ChatCompletionMessageListDataInner>**](ChatCompletionMessageListDataInner.md) | An array of chat completion message objects.  | [default to const []]
 **firstId** | **String** | The identifier of the first chat message in the data array. | 
 **lastId** | **String** | The identifier of the last chat message in the data array. | 
 **hasMore** | **bool** | Indicates whether there are more chat messages available. | 

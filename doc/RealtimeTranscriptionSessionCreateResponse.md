@@ -9,7 +9,7 @@ import 'package:openai_flutter_sdk/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clientSecret** | [**RealtimeTranscriptionSessionCreateResponseClientSecret**](RealtimeTranscriptionSessionCreateResponseClientSecret.md) |  | 
-**modalities** | [**JsonObject**](.md) |  | [optional] 
+**modalities** | [**Object**](.md) |  | [optional] 
 **inputAudioFormat** | **String** | The format of input audio. Options are `pcm16`, `g711_ulaw`, or `g711_alaw`.  | [optional] 
 **inputAudioTranscription** | [**RealtimeTranscriptionSessionCreateResponseInputAudioTranscription**](RealtimeTranscriptionSessionCreateResponseInputAudioTranscription.md) |  | [optional] 
 **turnDetection** | [**RealtimeSessionCreateResponseTurnDetection**](RealtimeSessionCreateResponseTurnDetection.md) |  | [optional] 
